@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Shopping Cart System</title>
+<style>
+    body {
+        font-family: "Fira Code", monospace;
+        background: #ffe6f2;
+        margin: 0;
+        padding: 40px;
+        color: #4a4a4a;
+    }
+    h1 { color: #d63384; font-size: 32px; margin-bottom: 10px; }
+    h2 { color: #bf2d74; margin-top: 30px; }
+    .section {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+        border-left: 5px solid #ff4da6;
+    }
+</style>
+</head>
+<body>
+
+<h1>Smart Shopping Cart System</h1>
+<p><i>RFID-based automated billing with wireless updates and LCD feedback.</i></p>
+
+<div class="section">
+<h2>Objective</h2>
+<p>
+To design a smart retail cart that detects products automatically, maintains an internal inventory, and sends real-time updates wirelessly to reduce billing delays and enhance customer experience.
+</p>
+</div>
+
+<div class="section">
+<h2>Design Overview</h2>
+<ul>
+    <li>STM32F401 ARM Cortex-M4</li>
+    <li>RC522 RFID Reader (SPI)</li>
+    <li>HC-05 Bluetooth (UART)</li>
+    <li>LCD 16×2 (I2C)</li>
+    <li>RGB LED + Buzzer</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Core Functional Modules</h2>
+<ol>
+    <li><b>Automated Item Detection</b> via RFID scanning</li>
+    <li><b>Real-Time Cart Management</b>:
+        updates LCD, pricing, quantity</li>
+    <li><b>Wireless Data Transfer</b> to PC via HC-05</li>
+    <li><b>User Interface</b> with indicators + buzzer</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>Desktop Application</h2>
+<p>
+Built using Python + PyQt5 to visualize cart state, show total price, and simulate checkout.
+</p>
+</div>
+
+<div class="section">
+<h2>Firmware Architecture</h2>
+<ul>
+    <li>RFID handler</li>
+    <li>Cart management module</li>
+    <li>Bluetooth communication module</li>
+    <li>LCD and feedback drivers</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Testing & Performance</h2>
+<ul>
+    <li>Fast RFID scanning</li>
+    <li>Stable SPI + UART communication</li>
+    <li>Immediate LCD updates</li>
+    <li>Low-latency wireless transfers</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Evaluation</h2>
+<p>
+The system successfully automated item detection and billing while demonstrating strong embedded programming, IoT system design, and hardware–software integration.
+</p>
+</div>
+
+</body>
+</html>

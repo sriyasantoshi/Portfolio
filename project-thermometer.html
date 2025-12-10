@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Thermometer with Overheat Alert</title>
+<style>
+    body {
+        font-family: "Fira Code", monospace;
+        background: #ffe6f2;
+        margin: 0;
+        padding: 40px;
+        color: #4a4a4a;
+    }
+    h1 { color: #d63384; font-size: 32px; margin-bottom: 10px; }
+    h2 { color: #bf2d74; margin-top: 30px; }
+    .section {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+        border-left: 5px solid #ff4da6;
+    }
+</style>
+</head>
+<body>
+
+<h1>Digital Thermometer with Overheat Alert System</h1>
+<p><i>PIC16F877A-based temperature monitor with ADC processing and UART output.</i></p>
+
+<div class="section">
+<h2>Objective</h2>
+<p>
+To develop a precise real-time temperature monitoring system with an alert mechanism when temperature exceeds 80°C, ensuring stability and reliability.
+</p>
+</div>
+
+<div class="section">
+<h2>Technical Architecture</h2>
+<ul>
+    <li>PIC16F877A Microcontroller</li>
+    <li>LM35 Temperature Sensor</li>
+    <li>CP2102 USB-UART</li>
+    <li>16×2 LCD Display</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>System Workflow</h2>
+<ol>
+    <li>LM35 produces analog voltage</li>
+    <li>PIC ADC reads and converts to °C</li>
+    <li>LCD shows temperature</li>
+    <li>Alert is triggered if temperature > 80°C</li>
+    <li>UART logs data to PC</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>Firmware Development</h2>
+<ul>
+    <li>ADC driver</li>
+    <li>UART driver</li>
+    <li>LCD driver</li>
+    <li>Threshold detection</li>
+</ul>
+<p>Developed with MPLAB X + XC8 using interrupt-driven design.</p>
+</div>
+
+<div class="section">
+<h2>Testing & Validation</h2>
+<ul>
+    <li>Temperature accuracy tested across multiple ranges</li>
+    <li>Calibration using reference voltages</li>
+    <li>Sensor tested for linearity</li>
+    <li>UART tested at different baud rates</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Results & Evaluation</h2>
+<p>
+The thermometer produced stable and precise readings, and the overheating alert worked reliably. UART communication was robust throughout extended testing.
+</p>
+</div>
+
+</body>
+</html>

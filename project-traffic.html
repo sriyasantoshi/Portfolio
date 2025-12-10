@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Traffic Accident Prediction — Sriya</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-name">Sriya S. Puranam</div>
+      </div>
+      <nav class="main-nav"><a href="index.html">← back</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2 class="section-title">Traffic Accident Prediction Using Machine Learning</h2>
+      <p class="muted">A data-driven ML system for predicting accident severity and casualties.</p>
+
+      <div class="project-card">
+
+        <h3>Objective</h3>
+        <p>
+          The goal was to build a machine learning system capable of predicting accident severity 
+          and expected casualties using large-scale accident data. The system helps transport 
+          departments identify high-risk factors and apply targeted safety interventions.
+        </p>
+
+        <h3>Background & Motivation</h3>
+        <p>
+          Accident severity depends on multiple interacting factors—weather, lighting, surface 
+          conditions, and driver demographics. Traditional statistical methods struggle with 
+          non-linear relationships, so this project explored whether ensemble ML models could 
+          provide better predictive reliability and actionable insights.
+        </p>
+
+        <h3>Dataset</h3>
+        <p>
+          12,317 accident records with 15 input variables:
+        </p>
+        <ul>
+          <li>Driver profile (age, education, experience)</li>
+          <li>Road environment (surface condition, lanes, traffic density)</li>
+          <li>Weather and lighting condition</li>
+          <li>Collision type and number of vehicles</li>
+        </ul>
+        <p>Targets:</p>
+        <ul>
+          <li><strong>Accident Severity</strong> — 0 (low), 1 (medium), 2 (high)</li>
+          <li><strong>Number of Casualties</strong> — continuous value</li>
+        </ul>
+
+        <h4>Preprocessing</h4>
+        <ul>
+          <li>Missing/outlier handling</li>
+          <li>One-hot encoding for categorical fields</li>
+          <li>Train/test split (80/20)</li>
+          <li>Normalization for regression targets</li>
+          <li>Undersampling for balancing where needed</li>
+        </ul>
+
+        <h3>Modelling Approach</h3>
+
+        <h4>1. Severity Classification</h4>
+        <ul>
+          <li>Model: Random Forest Classifier</li>
+          <li>Hyperparameters: n_estimators, max_depth, max_features</li>
+          <li>Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix</li>
+        </ul>
+
+        <h4>2. Casualty Regression</h4>
+        <ul>
+          <li>Model: Random Forest Regressor</li>
+          <li>Metrics: RMSE, MAE, R² score</li>
+        </ul>
+
+        <p>Tools used: Python, Pandas, NumPy, Sciki
