@@ -1,96 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Tomato Leaf Disease Detection Using CNN</title>
-<style>
-    body {
-        font-family: "Fira Code", monospace;
-        background: #ffe6f2;
-        margin: 0;
-        padding: 40px;
-        color: #4a4a4a;
-    }
-    h1 { color: #d63384; font-size: 32px; margin-bottom: 10px; }
-    h2 { color: #bf2d74; margin-top: 30px; }
-    .section {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 20px;
-        border-left: 5px solid #ff4da6;
-    }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tomato Leaf Disease Detection — Sriya</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-name">Sriya S. Puranam</div>
+      </div>
+      <nav class="main-nav"><a href="index.html">← back</a></nav>
+    </div>
+  </header>
 
-<h1>Tomato Leaf Disease Detection Using CNN</h1>
-<p><i>Deep learning–based classification system using VGG16/VGG19.</i></p>
+  <main class="container">
+    <section class="section">
+      <h2 class="section-title">Tomato Leaf Disease Detection Using CNN</h2>
+      <p class="muted">
+        Deep learning–based image classification system using transfer learning with VGG16 and VGG19.
+      </p>
 
-<div class="section">
-<h2>Overview</h2>
-<p>
-Tomato crops suffer from a range of leaf diseases that reduce yield and create economic losses.
-This project builds a CNN-based image classifier using transfer learning (VGG16/VGG19) to automatically detect and classify 11 tomato leaf diseases.
-</p>
-</div>
+      <div class="project-card">
 
-<div class="section">
-<h2>Objective</h2>
-<p>
-To create an automated system that classifies tomato leaf images into 11 categories using deep learning, enabling accurate and early disease detection for smart agriculture.
-</p>
-</div>
+        <h3>Objective</h3>
+        <p>
+          The objective of this project was to develop an automated image classification system
+          capable of identifying and classifying tomato leaf diseases into 11 categories using
+          convolutional neural networks, enabling early and accurate disease detection in
+          agricultural settings.
+        </p>
 
-<div class="section">
-<h2>Dataset & Problem Scope</h2>
-<ul>
-    <li><b>Source:</b> Kaggle – Tomato Disease Multiple Sources</li>
-    <li><b>Total Images:</b> 32,535</li>
-    <li>Train/ Test Split: 80% / 20%</li>
-    <li>11 classes including Late Blight, Early Blight, Leaf Mold, Mosaic Virus, Healthy, etc.</li>
-</ul>
-</div>
+        <h3>Background & Motivation</h3>
+        <p>
+          Tomato crops are highly susceptible to a variety of leaf diseases that significantly
+          reduce yield and crop quality. Manual inspection is time-consuming and error-prone.
+          This project leverages deep learning and transfer learning techniques to provide a
+          scalable and reliable solution for smart agriculture.
+        </p>
 
-<div class="section">
-<h2>System Pipeline</h2>
-<ol>
-    <li>Image resizing & normalization</li>
-    <li>Data augmentation (rotation, flip, zoom, shear)</li>
-    <li>VGG16/19 convolution base for feature extraction</li>
-    <li>Custom dense layers + dropout</li>
-    <li>Training for 10 epochs</li>
-    <li>Evaluation on unseen test images</li>
-</ol>
-</div>
+        <h3>Dataset</h3>
+        <ul>
+          <li><strong>Source:</strong> Kaggle – Tomato Disease (Multiple Sources)</li>
+          <li><strong>Total Images:</strong> 32,535</li>
+          <li><strong>Classes:</strong> 11 (including Early Blight, Late Blight, Leaf Mold, Mosaic Virus, Healthy, etc.)</li>
+          <li><strong>Train/Test Split:</strong> 80% / 20%</li>
+        </ul>
 
-<div class="section">
-<h2>Technical Approach</h2>
-<p><b>Model Architecture:</b> VGG-based CNN with custom classification head.</p>
-<ul>
-    <li>Loss: Categorical Cross-Entropy</li>
-    <li>Optimizer: Adam / SGD</li>
-    <li>Metric: Accuracy</li>
-    <li>Softmax output with 11 neurons</li>
-</ul>
-</div>
+        <h3>System Pipeline</h3>
+        <ul>
+          <li>Image resizing and normalization</li>
+          <li>Data augmentation (rotation, flipping, zoom, shear)</li>
+          <li>Feature extraction using VGG16/VGG19 convolutional base</li>
+          <li>Custom dense layers with dropout regularization</li>
+          <li>Model training and validation</li>
+          <li>Evaluation on unseen test images</li>
+        </ul>
 
-<div class="section">
-<h2>Evaluation & Performance</h2>
-<p>
-Tested on unseen images with strong accuracy and stable validation performance. Transfer learning improved generalization, and augmentation reduced overfitting.
-</p>
-</div>
+        <h3>Technical Approach</h3>
+        <ul>
+          <li><strong>Architecture:</strong> VGG-based CNN with custom classification head</li>
+          <li><strong>Loss Function:</strong> Categorical Cross-Entropy</li>
+          <li><strong>Optimizer:</strong> Adam / SGD</li>
+          <li><strong>Evaluation Metric:</strong> Accuracy</li>
+          <li><strong>Output Layer:</strong> Softmax with 11 neurons</li>
+        </ul>
 
-<div class="section">
-<h2>Prediction Workflow</h2>
-<ol>
-    <li>Input leaf image</li>
-    <li>Resize + normalize</li>
-    <li>Model inference</li>
-    <li>Output predicted disease class</li>
-</ol>
-</div>
+        <h3>Evaluation & Performance</h3>
+        <p>
+          The model achieved strong classification accuracy on unseen test images with stable
+          validation performance. Transfer learning significantly improved convergence speed,
+          while data augmentation helped reduce overfitting.
+        </p>
 
+        <h3>Prediction Workflow</h3>
+        <ul>
+          <li>Input tomato leaf image</li>
+          <li>Image preprocessing and normalization</li>
+          <li>Model inference using trained CNN</li>
+          <li>Predicted disease class output</li>
+        </ul>
+
+        <p class="muted">
+          Tools & Technologies: Python, TensorFlow/Keras, VGG16, VGG19,
+          OpenCV, NumPy
+        </p>
+
+      </div>
+    </section>
+  </main>
 </body>
 </html>
