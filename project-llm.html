@@ -1,100 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hybrid Text Summarization System with Comparative Model Analysis</title>
-<style>
-    body {
-        font-family: "Fira Code", monospace;
-        background: #ffe6f2;
-        margin: 0;
-        padding: 40px;
-        color: #4a4a4a;
-    }
-    h1 { color: #d63384; font-size: 32px; margin-bottom: 10px; }
-    h2 { color: #bf2d74; margin-top: 30px; }
-    .section {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 20px;
-        border-left: 5px solid #ff4da6;
-    }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hybrid Text Summarization System — Sriya</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-name">Sriya S. Puranam</div>
+      </div>
+      <nav class="main-nav"><a href="index.html">← back</a></nav>
+    </div>
+  </header>
 
-<h1>Hybrid Text Summarization System with Comparative Model Analysis</h1>
-<p><i>Comparative analysis of a fine-tuned LLaMA model and a custom-built LLM, both trained on social media and news API data</i></p>
+  <main class="container">
+    <section class="section">
+      <h2 class="section-title">Hybrid Text Summarization System with Comparative Model Analysis</h2>
+      <p class="muted">
+        Comparative analysis of a fine-tuned LLaMA model and a custom-built LLM using social media and news data.
+      </p>
 
-<div class="section">
-<h2>Objective</h2>
-<p>
-To create an automated content analysis system that processes large volumes of social media posts and news articles, generating concise summaries and sentiment insights while comparing fine-tuned transformer models against custom architectures for optimal performance.
-</p>
-</div>
+      <div class="project-card">
 
-<div class="section">
-<h2>Design Overview</h2>
-<ul>
-    <li>LLaMA + LoRA (PEFT)</li>
-    <li>PyTorch / Transformers</li>
-    <li>Twitter API (Tweepy)</li>
-    <li>Reddit API (PRAW)</li>
-    <li>NewsAPI / GNews</li>
-    <li>FastAPI Backend</li>
-    <li>VADER Sentiment Analysis</li>
-    <li>NLTK / BeautifulSoup</li>
-</ul>
-</div>
+        <h3>Objective</h3>
+        <p>
+          The objective of this project was to develop an automated NLP system capable of aggregating
+          large-scale textual data from social media platforms and news sources, generating concise
+          summaries and sentiment insights while comparing transformer-based fine-tuned models against
+          custom language model architectures.
+        </p>
 
-<div class="section">
-<h2>Core Functional Modules</h2>
-<ol>
-    <li><b>Multi-Source Data Retrieval</b> via Twitter, Reddit, NewsAPI, and GNews APIs</li>
-    <li><b>Intelligent Text Processing</b>:
-        dual pipelines for news articles and social media posts</li>
-    <li><b>AI-Powered Summarization</b> using fine-tuned LLaMA with LoRA adapters</li>
-    <li><b>Sentiment & Trend Analysis</b> with VADER and pattern detection</li>
-</ol>
-</div>
+        <h3>Background & Motivation</h3>
+        <p>
+          With the rapid growth of unstructured text data across platforms like Twitter, Reddit, and
+          online news portals, manual analysis becomes impractical. This project explores whether
+          parameter-efficient fine-tuning techniques such as LoRA can outperform traditional or
+          lightweight custom models in real-world summarization and sentiment analysis tasks.
+        </p>
 
-<div class="section">
-<h2>Model Architecture</h2>
-<p>
-Dual-model approach: Fine-tuned LLaMA with parameter-efficient LoRA adapters trained on clean news data then adapted for social media text, compared against a custom-built baseline model for performance benchmarking.
-</p>
-</div>
+        <h3>Technology Stack</h3>
+        <ul>
+          <li>LLaMA with LoRA (PEFT)</li>
+          <li>PyTorch & Hugging Face Transformers</li>
+          <li>Twitter API (Tweepy)</li>
+          <li>Reddit API (PRAW)</li>
+          <li>NewsAPI / GNews</li>
+          <li>FastAPI backend</li>
+          <li>VADER sentiment analysis</li>
+          <li>NLTK & BeautifulSoup</li>
+        </ul>
 
-<div class="section">
-<h2>System Pipeline</h2>
-<ul>
-    <li>API aggregation layer (Twitter, Reddit, News)</li>
-    <li>Text preprocessing and normalization module</li>
-    <li>LLaMA inference engine with LoRA</li>
-    <li>Custom model for comparative analysis</li>
-    <li>Sentiment analysis and trend detection</li>
-    <li>FastAPI REST backend</li>
-</ul>
-</div>
+        <h3>Core Functional Modules</h3>
+        <ul>
+          <li>
+            <strong>Multi-Source Data Retrieval</strong> —
+            automated collection of data from social media and news APIs
+          </li>
+          <li>
+            <strong>Text Preprocessing Pipeline</strong> —
+            cleaning, normalization, and separation of social and news content
+          </li>
+          <li>
+            <strong>AI-Powered Summarization</strong> —
+            fine-tuned LLaMA model enhanced with LoRA adapters
+          </li>
+          <li>
+            <strong>Sentiment & Trend Analysis</strong> —
+            polarity scoring and topic trend identification using VADER
+          </li>
+        </ul>
 
-<div class="section">
-<h2>Testing & Performance</h2>
-<ul>
-    <li>Multi-API rate limiting and error handling</li>
-    <li>Efficient LoRA-based fine-tuning workflow</li>
-    <li>Real-time sentiment scoring accuracy</li>
-    <li>Comparative model evaluation metrics</li>
-</ul>
-</div>
+        <h3>Model Architecture</h3>
+        <p>
+          A dual-model approach was implemented. A fine-tuned LLaMA model using LoRA adapters was
+          trained on curated news datasets and adapted to social media text. Its performance was
+          benchmarked against a custom-built language model to evaluate efficiency, accuracy,
+          and scalability.
+        </p>
 
-<div class="section">
-<h2>Evaluation</h2>
-<p>
-The system successfully aggregates multi-source data and generates intelligent summaries while demonstrating advanced NLP techniques, transfer learning implementation, and scalable API architecture design.
-</p>
-</div>
+        <h3>System Pipeline</h3>
+        <ul>
+          <li>API aggregation layer (Twitter, Reddit, News)</li>
+          <li>Text preprocessing and normalization module</li>
+          <li>LLaMA inference engine with LoRA adapters</li>
+          <li>Custom baseline model for comparison</li>
+          <li>Sentiment analysis and trend detection</li>
+          <li>FastAPI-based REST interface</li>
+        </ul>
 
+        <h3>Testing & Performance</h3>
+        <ul>
+          <li>Robust API rate limiting and error handling</li>
+          <li>Efficient parameter-efficient fine-tuning workflow</li>
+          <li>Accurate real-time sentiment scoring</li>
+          <li>Comparative evaluation using summarization quality metrics</li>
+        </ul>
+
+        <h3>Evaluation</h3>
+        <p>
+          The system successfully demonstrated scalable multi-source data aggregation, high-quality
+          abstractive summarization, and effective sentiment analysis. It highlights strong expertise
+          in modern NLP, transfer learning, and production-ready API design.
+        </p>
+
+        <p class="muted">
+          Tools & Technologies: PyTorch, Transformers, LLaMA, LoRA (PEFT), FastAPI,
+          Twitter API, Reddit API, NewsAPI, VADER
+        </p>
+
+      </div>
+    </section>
+  </main>
 </body>
 </html>
-
