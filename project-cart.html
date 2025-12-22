@@ -1,94 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Smart Shopping Cart System</title>
-<style>
-    body {
-        font-family: "Fira Code", monospace;
-        background: #ffe6f2;
-        margin: 0;
-        padding: 40px;
-        color: #4a4a4a;
-    }
-    h1 { color: #d63384; font-size: 32px; margin-bottom: 10px; }
-    h2 { color: #bf2d74; margin-top: 30px; }
-    .section {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 20px;
-        border-left: 5px solid #ff4da6;
-    }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Shopping Cart System — Sriya</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-name">Sriya S. Puranam</div>
+      </div>
+      <nav class="main-nav"><a href="index.html">← back</a></nav>
+    </div>
+  </header>
 
-<h1>Smart Shopping Cart System</h1>
-<p><i>RFID-based automated billing with wireless updates and LCD feedback.</i></p>
+  <main class="container">
+    <section class="section">
+      <h2 class="section-title">Smart Shopping Cart System</h2>
+      <p class="muted">RFID-based automated billing system with wireless updates and real-time feedback.</p>
 
-<div class="section">
-<h2>Objective</h2>
-<p>
-To design a smart retail cart that detects products automatically, maintains an internal inventory, and sends real-time updates wirelessly to reduce billing delays and enhance customer experience.
-</p>
-</div>
+      <div class="project-card">
 
-<div class="section">
-<h2>Design Overview</h2>
-<ul>
-    <li>STM32F401 ARM Cortex-M4</li>
-    <li>RC522 RFID Reader (SPI)</li>
-    <li>HC-05 Bluetooth (UART)</li>
-    <li>LCD 16×2 (I2C)</li>
-    <li>RGB LED + Buzzer</li>
-</ul>
-</div>
+        <h3>Objective</h3>
+        <p>
+          The objective of this project was to design and implement a smart shopping cart capable of
+          automatically detecting items, maintaining a running bill, and transmitting cart data
+          wirelessly to reduce checkout delays and improve the retail shopping experience.
+        </p>
 
-<div class="section">
-<h2>Core Functional Modules</h2>
-<ol>
-    <li><b>Automated Item Detection</b> via RFID scanning</li>
-    <li><b>Real-Time Cart Management</b>:
-        updates LCD, pricing, quantity</li>
-    <li><b>Wireless Data Transfer</b> to PC via HC-05</li>
-    <li><b>User Interface</b> with indicators + buzzer</li>
-</ol>
-</div>
+        <h3>Background & Motivation</h3>
+        <p>
+          Conventional retail billing systems rely heavily on manual barcode scanning, which causes
+          long queues and inefficiencies. By integrating RFID technology with embedded systems and
+          wireless communication, this project explores a scalable approach to faster, user-friendly
+          billing automation.
+        </p>
 
-<div class="section">
-<h2>Desktop Application</h2>
-<p>
-Built using Python + PyQt5 to visualize cart state, show total price, and simulate checkout.
-</p>
-</div>
+        <h3>System Design</h3>
+        <ul>
+          <li>STM32F401 (ARM Cortex-M4) microcontroller</li>
+          <li>RC522 RFID reader (SPI interface)</li>
+          <li>HC-05 Bluetooth module (UART)</li>
+          <li>16×2 LCD display (I²C)</li>
+          <li>RGB LED indicators and buzzer for feedback</li>
+        </ul>
 
-<div class="section">
-<h2>Firmware Architecture</h2>
-<ul>
-    <li>RFID handler</li>
-    <li>Cart management module</li>
-    <li>Bluetooth communication module</li>
-    <li>LCD and feedback drivers</li>
-</ul>
-</div>
+        <h3>Core Functional Modules</h3>
+        <ul>
+          <li>
+            <strong>Automated Item Detection</strong> —
+            RFID-based product identification when items are added or removed
+          </li>
+          <li>
+            <strong>Real-Time Cart Management</strong> —
+            dynamic update of item count, pricing, and total cost
+          </li>
+          <li>
+            <strong>Wireless Communication</strong> —
+            cart data transmitted to a desktop application via Bluetooth
+          </li>
+          <li>
+            <strong>User Feedback System</strong> —
+            LCD display, LEDs, and buzzer for instant user interaction
+          </li>
+        </ul>
 
-<div class="section">
-<h2>Testing & Performance</h2>
-<ul>
-    <li>Fast RFID scanning</li>
-    <li>Stable SPI + UART communication</li>
-    <li>Immediate LCD updates</li>
-    <li>Low-latency wireless transfers</li>
-</ul>
-</div>
+        <h3>Desktop Application</h3>
+        <p>
+          A desktop interface built using <strong>Python and PyQt5</strong> to visualize the cart
+          state, display detected items, compute the total price, and simulate the checkout process
+          in real time.
+        </p>
 
-<div class="section">
-<h2>Evaluation</h2>
-<p>
-The system successfully automated item detection and billing while demonstrating strong embedded programming, IoT system design, and hardware–software integration.
-</p>
-</div>
+        <h3>Firmware Architecture</h3>
+        <ul>
+          <li>RFID handling and tag validation module</li>
+          <li>Cart state and pricing management logic</li>
+          <li>Bluetooth communication protocol</li>
+          <li>LCD, LED, and buzzer driver modules</li>
+        </ul>
 
+        <h3>Testing & Performance</h3>
+        <ul>
+          <li>Low-latency RFID scanning and detection</li>
+          <li>Stable SPI and UART communication</li>
+          <li>Immediate LCD updates on item changes</li>
+          <li>Reliable wireless data transfer</li>
+        </ul>
+
+        <h3>Evaluation</h3>
+        <p>
+          The system successfully demonstrated end-to-end automation of item detection and billing.
+          It highlights strong embedded system design, real-time communication, and hardware–software
+          integration suitable for IoT-based retail applications.
+        </p>
+
+        <p class="muted">
+          Tools & Technologies: STM32CubeIDE, Embedded C, RFID (RC522), Bluetooth (HC-05),
+          Python, PyQt5
+        </p>
+
+      </div>
+    </section>
+  </main>
 </body>
 </html>
