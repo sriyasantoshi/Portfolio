@@ -1,1 +1,170 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sriya Santoshi Puranam — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-name">Naga Sriyasantoshi Puranam</div>
+        <div class="brand-sub">Electrical & Computer Engineering</div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero container">
+      <h1 class="hero-title">hi — i’m Sriya</h1>
+      <p class="hero-lead">I build reliable, software-driven systems that combine machine learning, embedded hardware, and thoughtful engineering. My work focuses on turning data into decisions—whether that data comes from sensors, models, or users—backed by careful testing and iteration.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#projects">see projects</a>
+        <a class="btn ghost" href="#contact">get in touch</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container section">
+      <h2 class="section-title">about</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I’m Sriya Santoshi, a tech enthusiast with a strong interest in machine learning, software development, and intelligent systems. I enjoy designing end-to-end projects that move from data collection and modeling to deployment on constrained devices or clean web interfaces. I’m motivated by understanding how things work under the hood and making them work well in practice.</p>
+          <p>Currently Working On:
+            <ul>
+              <li>Applying machine learning on sensor data using Arduino Nano 33 BLE Sense and Edge-AI workflows</li>
+              <li>Studying Large Language Models, focusing on architectures, inference, and practical integration into applications</li>
+              <li>Building software and web-based tools to support, visualize, and deploy ML-driven system</li>
+            </ul>
+        </p>
+        </div>
+
+        <aside class="contact-card">
+          <div class="contact-row"><strong>Email</strong><a href="mailto:Sriyasantoshi005@gmail.com">Sriyasantoshi005@gmail.com</a></div>
+          <div class="contact-row"><strong>Phone</strong><span>+91 86885 40043</span></div>
+          <div class="contact-row"><strong>LinkedIn</strong><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/sriya-santoshi-puranam-3a20412aa/">profile</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container section">
+      <h2 class="section-title">projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3 class="project-title">Traffic Accident Prediction</h3>
+          <p class="project-desc">Random Forest models to predict accident severity and expected casualties from traffic data. Focus on feature analysis and real-world interpretability.</p>
+          <div class="project-meta">Python • Scikit-learn • Data Analysis</div>
+          <a class="project-link" href="project-traffic.html">Open project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">Digital Thermometer (PIC)</h3>
+          <p class="project-desc">PIC16F877A + LM35, ADC reading and UART logging. Overheat alert system for safety demos.</p>
+          <div class="project-meta">Embedded C • MPLAB X </div>
+          <a class="project-link" href="project-thermometer.html">Open project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">Smart Shopping Cart</h3>
+          <p class="project-desc">RFID-based cart using STM32, real-time inventory, and Bluetooth link to a PyQt desktop app for checkout.</p>
+          <div class="project-meta">STM32 • PyQt • Bluetooth</div>
+          <a class="project-link" href="project-cart.html">Open project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-title">Tomato Leaf Disease Detection</h3>
+          <p class="project-desc">Transfer learning with VGG backbone for classifying tomato leaf diseases. Practical augmentations for robustness.</p>
+          <div class="project-meta">TensorFlow • Transfer Learning </div>
+          <a class="project-link" href="project-tomato.html">Open project →</a>
+        </article>
+        
+        <article class="project-card">
+          <h3 class="project-title">Hybrid Text Summarization System with Comparative Model Analysis</h3>
+          <p class="project-desc">Developing a multi-source NLP system that aggregates social media and news data via APIs, fine-tunes LLaMA with LoRA adapters for summarization and sentiment analysis, and compares performance against a custom-built baseline model.</p>
+          <div class="project-meta">Python • LLaMA • LoRA • PyTorch • FastAPI • Twitter API • NewsAPI</div>
+          <a class="project-link" href="project-llm.html">Open project →</a>
+        </article>
+      </div>
+    </section>
+
+<section id="skills" class="container section">
+  <h2 class="section-title">skills</h2>
+
+  <div class="skill-grid">
+    <div class="skill-block">
+      <h4>machine learning</h4>
+      <ul class="skill-list">
+        <li>TensorFlow / Keras</li>
+        <li>Scikit-learn</li>
+        <li>Data cleaning & feature work</li>
+        <li>PyTorch & HuggingFace Transformers</li>
+        <li>Fine-tuning LLMs (LLaMA, LoRA/PEFT)</li>
+        <li>NLP & Sentiment Analysis</li>
+        <li>Transfer Learning</li>
+      </ul>
+    </div>
+    
+    <div class="skill-block">
+      <h4>tools</h4>
+      <ul class="skill-list">
+        <li>Python, C, Embedded C</li>
+        <li>Git, Jupyter, VS Code</li>
+        <li>PyQt5, STM32CubeIDE</li>
+        <li>Postman / API testing tools</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <h4>backend & apis</h4>
+      <ul class="skill-list">
+        <li>FastAPI / Flask</li>
+        <li>REST API design</li>
+        <li>Multi-source data integration (Twitter, Reddit, News APIs)</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <h4>embedded systems</h4>
+      <ul class="skill-list">
+        <li>STM32 (HAL & bare-metal)</li>
+        <li>PIC microcontrollers</li>
+        <li>UART / SPI / I²C</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="container section">
+      <h2 class="section-title">contact</h2>
+      <p class="muted">I’m open to internships, collaboration. Email is preferred.</p>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:Sriyasantoshi005@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sriya-santoshi-puranam-3a20412aa/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Sriya Santoshi Puranam — handcrafted</small>
+    </div>
+  </footer>
+
+</body>
+</html>
