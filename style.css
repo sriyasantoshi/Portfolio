@@ -1,9 +1,9 @@
 :root{
-  --bg: #faf6f7;        /* off-white */
-  --card: #f2ecee;      /* muted card */
-  --text: #2a1e1e;      /* deep brown/near-black */
+  --bg: #faf6f7;       
+  --card: #f2ecee;     
+  --text: #2a1e1e;    
   --muted: #6b5b5b;
-  --accent: #ff7aa2;    /* soft strawberry pink (accent only) */
+  --accent: #7ad7ff;   
   --radius: 12px;
   --mono: 'JetBrains Mono', monospace;
 }
