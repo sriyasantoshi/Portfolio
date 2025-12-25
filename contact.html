@@ -1,32 +1,68 @@
-<section id="contact" class="container section">
-  <h2 class="section-title">contact</h2>
-  <p class="muted">I’m open to internships and collaboration. Email is preferred.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <form class="contact-form"
-        onsubmit="sendEmail(event)">
+  <!-- Link your existing CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" id="name" required>
+<body>
+
+  <section id="contact" class="container section">
+    <h2 class="section-title">contact</h2>
+    <p class="muted">
+      I’m open to internships and collaboration. Email is preferred.
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form class="contact-form" onsubmit="sendEmail(event)">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <!-- DIRECT EMAIL OPTION -->
+    <div class="contact-actions">
+      <a class="btn ghost" href="mailto:Sriyasantoshi005@gmail.com">
+        Or email me directly
+      </a>
     </div>
+  </section>
 
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" id="email" required>
-    </div>
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
 
-    <div class="form-group">
-      <label>Message</label>
-      <textarea id="message" rows="5" required></textarea>
-    </div>
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
 
-    <button type="submit" class="btn">Send Message</button>
-  </form>
+      const subject = encodeURIComponent("Portfolio Contact Message");
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      );
 
-  <div style="margin-top: 20px;">
-    <a class="btn ghost"
-       href="mailto:Sriyasantoshi005@gmail.com">
-       Or email me directly
-    </a>
-  </div>
-</section>
+      window.location.href =
+        `mailto:Sriyasantoshi005@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+</body>
+</html>
