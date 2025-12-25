@@ -1,7 +1,7 @@
 :root{
-  --bg: #faf6f7;       
-  --card: #f2ecee;     
-  --text: #2a1e1e;    
+  --bg: #faf6f7;        /* off-white */
+  --card: #f2ecee;      /* muted card */
+  --text: #2a1e1e;      /* deep brown/near-black */
   --muted: #6b5b5b;
   --accent: #7ad7ff;   
   --radius: 12px;
@@ -21,7 +21,8 @@ body{
   letter-spacing:0.2px;
 }
 
-.container{ max-width:1000px; margin:0 auto; padding:2rem; }
+/* Container */
+.container{ max-width:1000px; margin:0 auto; padding:2.0rem; }
 
 /* Header */
 .site-header{
@@ -36,14 +37,14 @@ body{
 .brand-name{ font-size:1.05rem; font-weight:600; color:var(--text); }
 .brand-sub{ font-size:0.78rem; color:var(--muted); margin-top:4px; }
 
+/* Nav */
 .main-nav a{
   text-decoration:none;
   color:var(--muted);
   margin-left:18px;
   font-size:0.92rem;
-  transition: color 0.3s ease;
 }
-.main-nav a:hover{ color:var(--accent); }
+.main-nav a:hover{ color:var(--text); border-bottom:2px solid transparent; }
 
 /* Hero */
 .hero{ padding-top:3.2rem; padding-bottom:2.4rem; text-align:left; }
@@ -51,7 +52,6 @@ body{
 .hero-lead{ color:var(--muted); margin-bottom:1.2rem; max-width:70ch; }
 .hero-cta{ display:flex; gap:0.8rem; }
 
-/* Buttons */
 .btn{
   display:inline-block;
   padding:0.6rem 1rem;
@@ -62,9 +62,7 @@ body{
   border: 1px solid transparent;
   background:var(--accent);
   color:white;
-  transition: all 0.2s ease;
 }
-.btn:hover{ transform: scale(1.05); }
 .btn.ghost{
   background:transparent;
   color:var(--text);
@@ -75,6 +73,20 @@ body{
 .section{ padding:2.2rem 0; border-top:1px solid rgba(42,30,30,0.04); }
 .section-title{ font-size:1.1rem; text-transform:lowercase; margin:0 0 1.2rem 0; color:var(--text); }
 
+/* About */
+.about-grid{ display:grid; grid-template-columns: 1fr 320px; gap:2rem; align-items:start; }
+.about-text p{ color:var(--muted); margin-bottom:1rem; }
+
+/* Contact card */
+.contact-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:1rem;
+  border:1px solid rgba(42,30,30,0.04);
+}
+.contact-row{ display:flex; justify-content:space-between; margin-bottom:0.6rem; color:var(--muted); }
+.contact-row a{ color:var(--text); text-decoration:none; font-weight:600; }
+
 /* Projects grid */
 .projects-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
 .project-card{
@@ -82,14 +94,11 @@ body{
   border-radius:var(--radius);
   padding:1.2rem;
   border:1px solid rgba(42,30,30,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.project-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 .project-title{ margin:0 0 0.6rem 0; font-size:1.05rem; color:var(--text); }
 .project-desc{ color:var(--muted); margin-bottom:0.8rem; }
+.project-meta{ color:var(--muted); font-size:0.85rem; margin-bottom:0.8rem; }
+.project-link{ text-decoration:none; color:var(--accent); font-weight:700; }
 
 /* Skills */
 .skill-grid{ display:flex; gap:1rem; flex-wrap:wrap; }
@@ -104,24 +113,15 @@ body{
 .skill-list{ margin:0; padding-left:1rem; color:var(--muted); }
 .skill-list li{ margin-bottom:0.5rem; }
 
-/* Contact form */
-.contact-form {
-  width: 100%;
-  max-width: 520px;
-  background: var(--card);
-  padding: 1.8rem;
-  border-radius: var(--radius);
-  border: 1px solid rgba(42,30,30,0.05);
-  margin: 0 auto;
+/* Contact actions */
+.contact-actions{ display:flex; gap:0.8rem; margin-top:1rem; }
+
+/* Footer */
+.site-footer{ padding:2rem 0; color:var(--muted); border-top:1px solid rgba(42,30,30,0.04); text-align:center; font-size:0.85rem; }
+
+/* Responsive */
+@media (max-width:900px){
+  .about-grid{ grid-template-columns:1fr; }
+  .main-nav{ display:none; }
+  .hero-title{ font-size:2rem; }
 }
-.form-group { display:flex; flex-direction:column; margin-bottom:1.2rem; }
-.form-group label { font-size:0.8rem; margin-bottom:6px; color: var(--muted); }
-.contact-form input,
-.contact-form textarea {
-  width:100%;
-  font-family:var(--mono);
-  font-size:0.9rem;
-  padding:0.65rem 0.75rem;
-  border-radius:8px;
-  border:1px solid rgba(42,30,30,0.12);
-  background:#fff
