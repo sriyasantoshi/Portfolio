@@ -24,15 +24,14 @@
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-
     <!-- Hero Section -->
     <section id="home" class="hero container">
       <h1 class="hero-title">hi — i’m Sriya</h1>
@@ -51,31 +50,49 @@
     <section id="projects" class="container section">
       <h2 class="section-title">projects</h2>
       <div class="projects-grid">
-        <!-- Example project -->
         <div class="project-card">
-          <h3>Surface Material Classifier</h3>
-          <p>Edge Impulse + STM32 deployment for material classification.</p>
+          <h3 class="project-title">Surface Material Classifier</h3>
+          <p class="project-desc">Edge Impulse + STM32 deployment for material classification.</p>
         </div>
         <div class="project-card">
-          <h3>Global EV Charging Analysis</h3>
-          <p>Data-driven ML project analyzing global EV station datasets.</p>
+          <h3 class="project-title">Global EV Charging Analysis</h3>
+          <p class="project-desc">Data-driven ML project analyzing global EV station datasets.</p>
         </div>
-        <!-- Add more projects as needed -->
       </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="container section">
       <h2 class="section-title">skills</h2>
-      <ul class="skills-list">
-        <li>Python / C / C++</li>
-        <li>Machine Learning & Edge AI</li>
-        <li>Embedded Systems (STM32, Arduino)</li>
-        <li>Web Development (HTML, CSS, JS)</li>
-        <li>Data Analysis & SQL</li>
-      </ul>
+      <div class="skill-grid">
+        <div class="skill-block">
+          <h4>Programming</h4>
+          <ul class="skill-list">
+            <li>Python / C / C++</li>
+            <li>SQL & Data Analysis</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h4>Machine Learning & AI</h4>
+          <ul class="skill-list">
+            <li>Edge AI</li>
+            <li>TensorFlow / Keras</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h4>Embedded Systems</h4>
+          <ul class="skill-list">
+            <li>STM32 / Arduino / Raspberry Pi</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h4>Web Development</h4>
+          <ul class="skill-list">
+            <li>HTML / CSS / JS</li>
+          </ul>
+        </div>
+      </div>
     </section>
-
   </main>
 
   <!-- Footer -->
