@@ -125,3 +125,82 @@ body{
   .main-nav{ display:none; }
   .hero-title{ font-size:2rem; }
 }
+
+#contact {
+  text-align: center;
+}
+
+#contact .muted {
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
+
+/* Override flex from earlier */
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Contact form card */
+.contact-form {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card);
+  padding: 1.8rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(42,30,30,0.05);
+}
+
+/* Fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(42,30,30,0.12);
+  background: #fff;
+  color: var(--text);
+}
+
+/* Focus state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(122, 215, 255, 0.35);
+}
+
+/* Textarea size */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+.contact-form .btn {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+/* LinkedIn button spacing */
+#contact .btn.ghost {
+  margin-top: 0.6rem;
+}
