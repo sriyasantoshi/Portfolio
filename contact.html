@@ -1,66 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Sriya Santoshi Puranam</title>
 
-  <!-- Link your existing CSS -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("CpmzMPLPwwmVqIvM"); // Your EmailJS user ID
+    })();
+  </script>
 </head>
 
 <body>
 
-  <section id="contact" class="container section">
-    <h2 class="section-title">contact</h2>
-    <p class="muted">
-      I’m open to internships and collaboration. Email is preferred.
-    </p>
-
-    <!-- CONTACT FORM -->
-    <form class="contact-form" onsubmit="sendEmail(event)">
-
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your name" required>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-name">Naga Sriyasantoshi Puranam</div>
+        <div class="brand-sub">Electrical & Computer Engineering</div>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="your@email.com" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-
-    <!-- DIRECT EMAIL OPTION -->
-    <div class="contact-actions">
-      <a class="btn ghost" href="mailto:Sriyasantoshi005@gmail.com">
-        Or email me directly
-      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
+  <main>
+    <!-- Contact Section -->
+    <section id="contact" class="container section">
+      <h2 class="section-title">contact</h2>
+      <p class="muted">I’m open to internships and collaboration. Email is preferred.</p>
+
+      <form class="contact-form" onsubmit="sendEmail(event)" novalidate>
+        <div class="form-group">
+          <label for="from_name">Name</label>
+          <input type="text" id="from_name" name="from_name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="reply_to">Email</label>
+          <input type="email" id="reply_to" name="reply_to" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-actions">
+        <a class="btn ghost" href="https://www.linkedin.com/in/sriya-santoshi-puranam-3a20412aa/" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Sriya Santoshi Puranam — handcrafted</small>
+    </div>
+  </footer>
+
+  <!-- EmailJS SMTP Script -->
   <script>
-    function sendEmail(event) {
-      event.preventDefault();
+    function sendEmail(e) {
+      e.preventDefault();
 
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-
-      const subject = encodeURIComponent("Portfolio Contact Message");
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      );
-
-      window.location.href =
-        `mailto:Sriyasantoshi005@gmail.com?subject=${subject}&body=${body}`;
+      emailjs.sendForm(
+        "smtp_gmail",       // Your SMTP EmailJS service ID
+        "template_homodxc", // Your template ID
+        e.target
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        e.target.reset();
+      })
+      .catch((error) => {
+        alert("Failed to send message. Please check your SMTP settings and App Password.");
+        console.error("EmailJS Error:", error);
+      });
     }
   </script>
 
