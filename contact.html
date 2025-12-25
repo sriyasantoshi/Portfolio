@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Sriya Santoshi Puranam</title>
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- EmailJS -->
@@ -19,14 +16,12 @@
     })();
   </script>
 </head>
-
 <body>
-
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="brand-name">Naga Sriyasantoshi Puranam</div>
+        <div class="brand-name">Sriya Santoshi Puranam</div>
         <div class="brand-sub">Electrical & Computer Engineering</div>
       </div>
 
@@ -40,7 +35,6 @@
   </header>
 
   <main>
-    <!-- Contact Section -->
     <section id="contact" class="container section">
       <h2 class="section-title">contact</h2>
       <p class="muted">I’m open to internships and collaboration. Email is preferred.</p>
@@ -72,21 +66,18 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <small>© 2025 Sriya Santoshi Puranam — handcrafted</small>
     </div>
   </footer>
 
-  <!-- EmailJS SMTP Script -->
   <script>
     function sendEmail(e) {
       e.preventDefault();
-
       emailjs.sendForm(
-        "smtp_gmail",       // Your SMTP EmailJS service ID
-        "template_homodxc", // Your template ID
+        "smtp_gmail",       // Replace with your SMTP EmailJS service ID
+        "template_homodxc", // Replace with your template ID
         e.target
       )
       .then(() => {
@@ -94,11 +85,10 @@
         e.target.reset();
       })
       .catch((error) => {
-        alert("Failed to send message. Please check your SMTP settings and App Password.");
+        alert("Failed to send message. Check SMTP settings & App Password.");
         console.error("EmailJS Error:", error);
       });
     }
   </script>
-
 </body>
 </html>
