@@ -10,14 +10,6 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("CpmzMPLPwwmVqIvM"); // Your EmailJS user ID
-    })();
-  </script>
 </head>
 
 <body>
@@ -31,10 +23,10 @@
       </div>
 
       <nav class="main-nav">
-        <a href="#about">About</a>
+        <a href="index.html">Home</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -51,41 +43,37 @@
 
       <div class="hero-cta">
         <a class="btn" href="#projects">see projects</a>
-        <a class="btn ghost" href="#contact">get in touch</a>
+        <a class="btn ghost" href="contact.html">get in touch</a>
       </div>
     </section>
 
-    <!-- About Section (unchanged, trimmed) -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="container section">
-      <h2 class="section-title">contact</h2>
-      <p class="muted">I’m open to internships and collaboration. Email is preferred.</p>
-
-      <form class="contact-form" onsubmit="sendEmail(event)" novalidate>
-        <div class="form-group">
-          <label for="from_name">Name</label>
-          <input type="text" id="from_name" name="from_name" required>
+    <!-- Projects Section -->
+    <section id="projects" class="container section">
+      <h2 class="section-title">projects</h2>
+      <div class="projects-grid">
+        <!-- Example project -->
+        <div class="project-card">
+          <h3>Surface Material Classifier</h3>
+          <p>Edge Impulse + STM32 deployment for material classification.</p>
         </div>
-
-        <div class="form-group">
-          <label for="reply_to">Email</label>
-          <input type="email" id="reply_to" name="reply_to" required>
+        <div class="project-card">
+          <h3>Global EV Charging Analysis</h3>
+          <p>Data-driven ML project analyzing global EV station datasets.</p>
         </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-
-      <div class="contact-actions">
-        <a class="btn ghost" href="https://www.linkedin.com/in/sriya-santoshi-puranam-3a20412aa/" target="_blank" rel="noopener">
-          LinkedIn
-        </a>
+        <!-- Add more projects as needed -->
       </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container section">
+      <h2 class="section-title">skills</h2>
+      <ul class="skills-list">
+        <li>Python / C / C++</li>
+        <li>Machine Learning & Edge AI</li>
+        <li>Embedded Systems (STM32, Arduino)</li>
+        <li>Web Development (HTML, CSS, JS)</li>
+        <li>Data Analysis & SQL</li>
+      </ul>
     </section>
 
   </main>
@@ -96,27 +84,6 @@
       <small>© 2025 Sriya Santoshi Puranam — handcrafted</small>
     </div>
   </footer>
-
-  <!-- EmailJS Script -->
-  <script>
-    function sendEmail(e) {
-      e.preventDefault();
-
-      emailjs.sendForm(
-        "service_qjvibtq", // Your EmailJS service ID
-        "template_homodxc", // Your EmailJS template ID
-        e.target
-      )
-      .then(() => {
-        alert("Message sent successfully!");
-        e.target.reset();
-      })
-      .catch((error) => {
-        alert("Failed to send message. Please try again.");
-        console.error("EmailJS Error:", error);
-      });
-    }
-  </script>
 
 </body>
 </html>
