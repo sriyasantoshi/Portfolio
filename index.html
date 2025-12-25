@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sriya Santoshi Puranam — Portfolio</title>
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    (function(){
-      emailjs.init("CpmzMPLPwwmVqIvM");
+    (function() {
+      emailjs.init("CpmzMPLPwwmVqIvM"); // Your EmailJS user ID
     })();
   </script>
 </head>
@@ -38,7 +41,7 @@
 
   <main>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home" class="hero container">
       <h1 class="hero-title">hi — i’m Sriya</h1>
       <p class="hero-lead">
@@ -52,38 +55,34 @@
       </div>
     </section>
 
-    <!-- About -->
-    <!-- (UNCHANGED — trimmed here for brevity) -->
+    <!-- About Section (unchanged, trimmed) -->
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="container section">
       <h2 class="section-title">contact</h2>
       <p class="muted">I’m open to internships and collaboration. Email is preferred.</p>
 
-      <form class="contact-form" onsubmit="sendEmail(event)">
-
+      <form class="contact-form" onsubmit="sendEmail(event)" novalidate>
         <div class="form-group">
-          <label>Name</label>
-          <input type="text" name="from_name" required>
+          <label for="from_name">Name</label>
+          <input type="text" id="from_name" name="from_name" required>
         </div>
 
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="reply_to" required>
+          <label for="reply_to">Email</label>
+          <input type="email" id="reply_to" name="reply_to" required>
         </div>
 
         <div class="form-group">
-          <label>Message</label>
-          <textarea name="message" rows="5" required></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
         <button type="submit" class="btn">Send Message</button>
       </form>
 
       <div class="contact-actions">
-        <a class="btn ghost"
-           href="https://www.linkedin.com/in/sriya-santoshi-puranam-3a20412aa/"
-           target="_blank" rel="noopener">
+        <a class="btn ghost" href="https://www.linkedin.com/in/sriya-santoshi-puranam-3a20412aa/" target="_blank" rel="noopener">
           LinkedIn
         </a>
       </div>
@@ -91,20 +90,21 @@
 
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <small>© 2025 Sriya Santoshi Puranam — handcrafted</small>
     </div>
   </footer>
 
-  <!-- EmailJS Send Script -->
+  <!-- EmailJS Script -->
   <script>
     function sendEmail(e) {
       e.preventDefault();
 
       emailjs.sendForm(
-        "service_qjvibtq",
-        "template_homodxc",
+        "service_qjvibtq", // Your EmailJS service ID
+        "template_homodxc", // Your EmailJS template ID
         e.target
       )
       .then(() => {
@@ -113,7 +113,7 @@
       })
       .catch((error) => {
         alert("Failed to send message. Please try again.");
-        console.error(error);
+        console.error("EmailJS Error:", error);
       });
     }
   </script>
