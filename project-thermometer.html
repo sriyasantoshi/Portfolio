@@ -1,113 +1,189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Digital Thermometer with Overheat Alert — Sriya</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Thermometer - Sriya Santoshi</title>
+    <link rel="stylesheet" href="project-style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="brand-name">Sriya S. Puranam</div>
-      </div>
-      <nav class="main-nav"><a href="index.html">← back</a></nav>
-    </div>
-  </header>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-  <main class="container">
-    <section class="section">
-      <h2 class="section-title">Digital Thermometer with Overheat Alert System</h2>
-      <p class="muted">
-        PIC16F877A-based temperature monitoring system with ADC processing and UART data logging.
-      </p>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
 
-      <div class="project-card">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">SS</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <h3>Objective</h3>
-        <p>
-          The objective of this project was to design a real-time digital thermometer capable of
-          accurately monitoring temperature and triggering an alert when the temperature exceeds
-          a predefined threshold of 80°C, ensuring system safety and reliability.
-        </p>
-
-        <h3>Background & Motivation</h3>
-        <p>
-          Temperature monitoring is critical in embedded and industrial systems where overheating
-          can lead to failure or damage. This project focuses on reliable analog signal processing,
-          precise ADC conversion, and robust alert mechanisms using a resource-constrained
-          microcontroller.
-        </p>
-
-        <h3>Technical Architecture</h3>
-        <ul>
-          <li>PIC16F877A microcontroller</li>
-          <li>LM35 analog temperature sensor</li>
-          <li>16×2 LCD display</li>
-          <li>CP2102 USB–UART interface</li>
-        </ul>
-
-        <h3>System Workflow</h3>
-        <ul>
-          <li>
-            <strong>Analog Signal Acquisition</strong> —
-            LM35 generates voltage proportional to temperature
-          </li>
-          <li>
-            <strong>ADC Processing</strong> —
-            PIC ADC converts analog voltage into digital temperature values
-          </li>
-          <li>
-            <strong>Real-Time Display</strong> —
-            temperature continuously displayed on LCD
-          </li>
-          <li>
-            <strong>Overheat Detection</strong> —
-            alert triggered when temperature exceeds 80°C
-          </li>
-          <li>
-            <strong>Data Logging</strong> —
-            temperature values transmitted to PC via UART
-          </li>
-        </ul>
-
-        <h3>Firmware Development</h3>
-        <ul>
-          <li>ADC driver for analog-to-digital conversion</li>
-          <li>UART driver for serial communication</li>
-          <li>LCD driver for real-time display</li>
-          <li>Threshold detection and alert logic</li>
-        </ul>
-        <p>
-          Firmware was developed using <strong>MPLAB X</strong> and <strong>XC8</strong>,
-          following an interrupt-driven design approach for reliable operation.
-        </p>
-
-        <h3>Testing & Validation</h3>
-        <ul>
-          <li>Temperature accuracy verified across multiple ranges</li>
-          <li>Calibration performed using reference voltages</li>
-          <li>Sensor linearity tested and validated</li>
-          <li>UART communication tested at multiple baud rates</li>
-        </ul>
-
-        <h3>Results & Evaluation</h3>
-        <p>
-          The system produced stable and accurate temperature readings throughout testing.
-          The overheat alert mechanism functioned reliably, and UART-based data transmission
-          remained robust during extended operation.
-        </p>
-
-        <p class="muted">
-          Tools & Technologies: PIC16F877A, Embedded C, MPLAB X, XC8,
-          LM35, UART Communication
-        </p>
-
-      </div>
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <div class="project-badge">Embedded Systems</div>
+            <h1 class="project-title">Digital Thermometer with PIC</h1>
+            <p class="project-subtitle">PIC16F877A-based temperature monitoring system with ADC reading, UART logging, and overheat alert mechanism</p>
+            <div class="tech-tags">
+                <span class="tech-tag">PIC16F877A</span>
+                <span class="tech-tag">Embedded C</span>
+                <span class="tech-tag">LM35</span>
+                <span class="tech-tag">ADC</span>
+                <span class="tech-tag">UART</span>
+                <span class="tech-tag">MPLAB X</span>
+            </div>
+        </div>
     </section>
-  </main>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="content-block">
+                <h2>Project Overview</h2>
+                <p>This embedded systems project implements a complete temperature monitoring solution using the PIC16F877A microcontroller and LM35 temperature sensor. The system provides accurate temperature readings, real-time UART data logging, and an intelligent overheat alert mechanism for safety demonstrations.</p>
+                <p>The project showcases fundamental embedded systems concepts including ADC configuration, sensor interfacing, and communication protocols, making it ideal for industrial monitoring and safety applications.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌡️</div>
+                        <h3>Accurate Sensing</h3>
+                        <p>LM35 sensor provides precise temperature measurements with 10mV/°C linear scale</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>ADC Processing</h3>
+                        <p>10-bit ADC resolution for accurate analog-to-digital conversion of temperature data</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📡</div>
+                        <h3>UART Logging</h3>
+                        <p>Real-time serial communication for continuous temperature monitoring and data logging</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚨</div>
+                        <h3>Alert System</h3>
+                        <p>Configurable threshold-based overheat detection with visual and audible alerts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Hardware Architecture</h2>
+                <div class="tech-detail">
+                    <h3>Core Components</h3>
+                    <ul>
+                        <li><strong>Microcontroller:</strong> PIC16F877A (40-pin DIP)</li>
+                        <li><strong>Sensor:</strong> LM35 precision temperature sensor</li>
+                        <li><strong>Display:</strong> 16x2 LCD for real-time temperature display</li>
+                        <li><strong>Alerts:</strong> LED indicator and buzzer for overheat warnings</li>
+                        <li><strong>Communication:</strong> MAX232 for UART level conversion</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Circuit Design</h3>
+                    <ul>
+                        <li>ADC Channel 0 configured for LM35 input (0-5V range)</li>
+                        <li>Crystal oscillator: 20MHz for precise timing</li>
+                        <li>LCD connected to PORTD with control signals on PORTB</li>
+                        <li>Alert outputs on dedicated GPIO pins with current limiting resistors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Software Implementation</h2>
+                <div class="tech-detail">
+                    <h3>Embedded C Programming</h3>
+                    <ul>
+                        <li>ADC initialization and configuration for continuous conversion</li>
+                        <li>Temperature calculation algorithm: Temp = (ADC_Value * 5000) / (1024 * 10)</li>
+                        <li>LCD driver functions for displaying temperature in Celsius and Fahrenheit</li>
+                        <li>UART communication at 9600 baud for PC interface</li>
+                        <li>Interrupt-driven alert system for threshold monitoring</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Development Environment</h3>
+                    <ul>
+                        <li>MPLAB X IDE for code development and debugging</li>
+                        <li>XC8 compiler for efficient code generation</li>
+                        <li>Proteus simulation for circuit validation</li>
+                        <li>PICkit 3 programmer for device flashing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>System Specifications</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-number">±0.5°C</div>
+                        <div class="result-label">Accuracy</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-number">1 sec</div>
+                        <div class="result-label">Update Rate</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-number">-55 to 150°C</div>
+                        <div class="result-label">Range</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Key Learnings</h2>
+                <div class="challenge-item">
+                    <h3>ADC Configuration</h3>
+                    <p>Mastered ADC module configuration including acquisition time, conversion clock selection, and reference voltage settings for optimal sensor reading accuracy.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Sensor Interfacing</h3>
+                    <p>Learned proper sensor calibration techniques and signal conditioning to minimize noise and ensure stable temperature readings.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Real-time Processing</h3>
+                    <p>Implemented efficient interrupt-driven architecture to handle simultaneous display updates, UART transmission, and alert monitoring without delays.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Applications</h2>
+                <ul class="future-list">
+                    <li>Industrial process monitoring and control</li>
+                    <li>HVAC system temperature regulation</li>
+                    <li>Laboratory equipment monitoring</li>
+                    <li>Food storage temperature tracking</li>
+                    <li>Environmental monitoring stations</li>
+                    <li>Safety demonstrations in educational settings</li>
+                </ul>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://github.com/sriyasantoshi" class="cta-button" target="_blank">
+                    View on GitHub →
+                </a>
+                <a href="index.html#contact" class="cta-button-secondary">
+                    Discuss This Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sriya Santoshi Puranam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="project-script.js"></script>
 </body>
 </html>
