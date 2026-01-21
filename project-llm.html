@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hybrid Text Summarization System - Sriya Santoshi</title>
+    <title>Hybrid Text Summarization System (Ongoing) - Sriya Santoshi</title>
     <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
@@ -27,276 +27,127 @@
     <section class="project-hero">
         <div class="container">
             <a href="index.html#projects" class="back-link">← Back to Projects</a>
-            <div class="project-badge">LLM & NLP</div>
+
+            <div class="project-badge">ONGOING PROJECT</div>
+
             <h1 class="project-title">Hybrid Text Summarization System</h1>
-            <p class="project-subtitle">Multi-source NLP system with LLaMA fine-tuning using LoRA adapters for intelligent summarization and sentiment analysis with comparative model evaluation</p>
+
+            <p class="project-subtitle">
+                An evolving NLP system focused on multi-source text aggregation and 
+                intelligent summarization using Large Language Models and parameter-efficient fine-tuning.
+            </p>
+
             <div class="tech-tags">
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">LLMs</span>
                 <span class="tech-tag">LLaMA</span>
                 <span class="tech-tag">LoRA</span>
                 <span class="tech-tag">PyTorch</span>
                 <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Transformers</span>
-                <span class="tech-tag">Twitter API</span>
-                <span class="tech-tag">NewsAPI</span>
             </div>
         </div>
     </section>
 
     <section class="project-content">
         <div class="container">
+
             <div class="content-block">
-                <h2>Project Overview</h2>
-                <p>This cutting-edge NLP project develops a comprehensive text summarization system that aggregates content from multiple sources including social media and news outlets, processes it through fine-tuned Large Language Models, and delivers intelligent summaries with sentiment analysis.</p>
-                <p>The system leverages LLaMA foundation models enhanced with LoRA (Low-Rank Adaptation) for efficient fine-tuning, while maintaining a custom baseline model for rigorous performance comparison. This hybrid approach ensures both accuracy and computational efficiency.</p>
+                <h2>Project Status</h2>
+                <p>
+                    🚧 <strong>This project is currently under active development.</strong><br>
+                    The system is being designed, prototyped, and iteratively improved with a focus on 
+                    scalability, model efficiency, and real-world applicability.
+                </p>
             </div>
 
             <div class="content-block">
-                <h2>Key Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🔄</div>
-                        <h3>Multi-source Aggregation</h3>
-                        <p>Real-time data collection from Twitter, news APIs, and RSS feeds with intelligent deduplication</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <h3>LLaMA + LoRA</h3>
-                        <p>Fine-tuned LLaMA models with parameter-efficient LoRA adapters for domain-specific summarization</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Sentiment Analysis</h3>
-                        <p>Multi-class sentiment classification with intensity scoring for nuanced understanding</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚖️</div>
-                        <h3>Model Comparison</h3>
-                        <p>Comprehensive benchmarking against custom baseline using ROUGE, BLEU, and BERTScore metrics</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>System Architecture</h2>
-                <div class="tech-detail">
-                    <h3>Data Pipeline</h3>
-                    <ul>
-                        <li><strong>Ingestion Layer:</strong> Twitter API v2, NewsAPI, RSS parsers for content collection</li>
-                        <li><strong>Preprocessing:</strong> Text cleaning, tokenization, entity recognition with spaCy</li>
-                        <li><strong>Storage:</strong> MongoDB for raw data, Redis for caching processed content</li>
-                        <li><strong>Queue System:</strong> RabbitMQ for asynchronous processing tasks</li>
-                    </ul>
-                </div>
-                <div class="tech-detail">
-                    <h3>Model Architecture</h3>
-                    <ul>
-                        <li><strong>LLaMA Backbone:</strong> LLaMA-2-7B or 13B base model</li>
-                        <li><strong>LoRA Configuration:</strong> Rank=16, Alpha=32 for efficient adaptation</li>
-                        <li><strong>Target Modules:</strong> Query, Key, Value attention layers</li>
-                        <li><strong>Baseline Model:</strong> Custom Transformer encoder-decoder with attention mechanism</li>
-                        <li><strong>Sentiment Module:</strong> Fine-tuned RoBERTa for emotion classification</li>
-                    </ul>
-                </div>
-                <div class="tech-detail">
-                    <h3>API & Deployment</h3>
-                    <ul>
-                        <li><strong>Backend:</strong> FastAPI with async endpoints for scalability</li>
-                        <li><strong>Model Serving:</strong> ONNX Runtime for optimized inference</li>
-                        <li><strong>Containerization:</strong> Docker with NVIDIA GPU support</li>
-                        <li><strong>Load Balancing:</strong> NGINX for handling concurrent requests</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>Technical Implementation</h2>
-                <div class="tech-detail">
-                    <h3>LoRA Fine-tuning Process</h3>
-                    <ul>
-                        <li>Base Model: Pre-trained LLaMA-2-7B from Hugging Face</li>
-                        <li>Training Data: 50K news-summary pairs from CNN/DailyMail and XSum datasets</li>
-                        <li>LoRA Parameters: r=16, alpha=32, dropout=0.05</li>
-                        <li>Optimizer: AdamW with learning rate 3e-4, cosine scheduler</li>
-                        <li>Training Hardware: 2x NVIDIA A100 GPUs with mixed precision (FP16)</li>
-                        <li>Epochs: 3 with early stopping based on validation ROUGE-L</li>
-                        <li>Memory Efficiency: ~30% GPU memory reduction compared to full fine-tuning</li>
-                    </ul>
-                </div>
-                <div class="tech-detail">
-                    <h3>Baseline Model Architecture</h3>
-                    <ul>
-                        <li>6-layer Transformer encoder-decoder (custom implementation)</li>
-                        <li>Embedding dimension: 512, Hidden dimension: 2048</li>
-                        <li>8 attention heads with scaled dot-product attention</li>
-                        <li>Positional encoding with sine-cosine embeddings</li>
-                        <li>Trained from scratch on same 50K dataset for fair comparison</li>
-                    </ul>
-                </div>
-                <div class="tech-detail">
-                    <h3>Data Collection & Processing</h3>
-                    <ul>
-                        <li><strong>Twitter API:</strong> Real-time streaming with keyword filters, rate limiting handled</li>
-                        <li><strong>NewsAPI:</strong> Top headlines and everything endpoint with source prioritization</li>
-                        <li><strong>Preprocessing:</strong> URL removal, emoji handling, language detection</li>
-                        <li><strong>Deduplication:</strong> MinHash LSH for near-duplicate detection</li>
-                        <li><strong>Entity Extraction:</strong> NER for people, organizations, locations</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>Performance Comparison</h2>
-                <div class="comparison-table">
-                    <h3>Model Evaluation Metrics</h3>
-                    <table class="metrics-table">
-                        <thead>
-                            <tr>
-                                <th>Metric</th>
-                                <th>LLaMA + LoRA</th>
-                                <th>Baseline Model</th>
-                                <th>Improvement</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ROUGE-1</td>
-                                <td>0.423</td>
-                                <td>0.367</td>
-                                <td>+15.3%</td>
-                            </tr>
-                            <tr>
-                                <td>ROUGE-2</td>
-                                <td>0.189</td>
-                                <td>0.142</td>
-                                <td>+33.1%</td>
-                            </tr>
-                            <tr>
-                                <td>ROUGE-L</td>
-                                <td>0.395</td>
-                                <td>0.341</td>
-                                <td>+15.8%</td>
-                            </tr>
-                            <tr>
-                                <td>BERTScore F1</td>
-                                <td>0.871</td>
-                                <td>0.823</td>
-                                <td>+5.8%</td>
-                            </tr>
-                            <tr>
-                                <td>Inference Speed</td>
-                                <td>142 ms</td>
-                                <td>87 ms</td>
-                                <td>-38.7%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="result-description">The LLaMA+LoRA model significantly outperforms the baseline in all quality metrics while maintaining acceptable inference speeds. The LoRA approach achieves 90% of full fine-tuning quality with only 1% of trainable parameters.</p>
-            </div>
-
-            <div class="content-block">
-                <h2>Sentiment Analysis Module</h2>
-                <div class="tech-detail">
-                    <h3>Implementation</h3>
-                    <ul>
-                        <li>Fine-tuned RoBERTa-base on Twitter sentiment dataset (1.6M tweets)</li>
-                        <li>5-class sentiment: Very Negative, Negative, Neutral, Positive, Very Positive</li>
-                        <li>Confidence scoring for each prediction (0-1 scale)</li>
-                        <li>Aspect-based sentiment for entity-specific analysis</li>
-                        <li>Real-time dashboard showing sentiment trends over time</li>
-                    </ul>
-                </div>
-                <div class="results-grid">
-                    <div class="result-card">
-                        <div class="result-number">91.2%</div>
-                        <div class="result-label">Sentiment Accuracy</div>
-                    </div>
-                    <div class="result-card">
-                        <div class="result-number">0.89</div>
-                        <div class="result-label">Macro F1-Score</div>
-                    </div>
-                    <div class="result-card">
-                        <div class="result-number">67ms</div>
-                        <div class="result-label">Avg Inference Time</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>API Endpoints</h2>
-                <div class="api-section">
-                    <div class="api-endpoint">
-                        <strong>POST /summarize</strong> - Generate summary from input text or URLs
-                    </div>
-                    <div class="api-endpoint">
-                        <strong>POST /summarize/multi-source</strong> - Aggregate and summarize from multiple sources
-                    </div>
-                    <div class="api-endpoint">
-                        <strong>POST /sentiment</strong> - Analyze sentiment of text
-                    </div>
-                    <div class="api-endpoint">
-                        <strong>GET /trending/{topic}</strong> - Get summarized trending content
-                    </div>
-                    <div class="api-endpoint">
-                        <strong>POST /compare</strong> - Compare both models on same input
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>Challenges & Solutions</h2>
-                <div class="challenge-item">
-                    <h3>API Rate Limiting</h3>
-                    <p>Twitter and NewsAPI impose strict rate limits. Implemented intelligent caching, request queueing, and distributed scraping across multiple API keys with automatic rotation.</p>
-                </div>
-                <div class="challenge-item">
-                    <h3>Model Size vs. Speed</h3>
-                    <p>LLaMA models are computationally expensive. Used LoRA for efficient fine-tuning, quantization (INT8) for inference, and ONNX optimization for 2.3x speedup.</p>
-                </div>
-                <div class="challenge-item">
-                    <h3>Cross-source Consistency</h3>
-                    <p>Different sources have varying formats and quality. Built robust preprocessing pipeline with adaptive cleaning rules and source-specific parsers.</p>
-                </div>
-                <div class="challenge-item">
-                    <h3>Real-time Processing</h3>
-                    <p>High volume of incoming data required efficient processing. Implemented asynchronous workers, batch inference, and priority queueing based on content recency.</p>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>Use Cases</h2>
+                <h2>Initial Project Objective</h2>
+                <p>
+                    The goal of this project is to build a hybrid text summarization platform that can:
+                </p>
                 <ul class="future-list">
-                    <li><strong>News Aggregation:</strong> Automated daily news briefings from multiple sources</li>
-                    <li><strong>Social Media Monitoring:</strong> Track brand mentions and public sentiment</li>
-                    <li><strong>Research Assistant:</strong> Summarize academic papers and research articles</li>
-                    <li><strong>Content Curation:</strong> Generate topic-specific content digests</li>
-                    <li><strong>Crisis Management:</strong> Real-time monitoring of breaking news with sentiment analysis</li>
-                    <li><strong>Market Intelligence:</strong> Aggregate financial news and investor sentiment</li>
+                    <li>Collect textual data from multiple sources such as news articles and social media</li>
+                    <li>Generate concise, coherent summaries using Large Language Models</li>
+                    <li>Compare LLM-based summaries with a lightweight baseline model</li>
+                    <li>Provide sentiment insights alongside generated summaries</li>
                 </ul>
             </div>
 
             <div class="content-block">
-                <h2>Future Enhancements</h2>
+                <h2>Planned System Architecture</h2>
+
+                <div class="tech-detail">
+                    <h3>Data Pipeline (Planned)</h3>
+                    <ul>
+                        <li>Content ingestion from news APIs and social platforms</li>
+                        <li>Text preprocessing: cleaning, normalization, and tokenization</li>
+                        <li>Deduplication and basic entity extraction</li>
+                    </ul>
+                </div>
+
+                <div class="tech-detail">
+                    <h3>Modeling Approach (In Progress)</h3>
+                    <ul>
+                        <li>LLaMA-based foundation model for abstractive summarization</li>
+                        <li>LoRA adapters for parameter-efficient fine-tuning</li>
+                        <li>Baseline transformer model for performance comparison</li>
+                        <li>Separate sentiment analysis module using transformer classifiers</li>
+                    </ul>
+                </div>
+
+                <div class="tech-detail">
+                    <h3>Backend & API (Planned)</h3>
+                    <ul>
+                        <li>FastAPI-based backend for model inference</li>
+                        <li>REST endpoints for summarization and sentiment analysis</li>
+                        <li>Dockerized deployment for reproducibility</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Current Progress</h2>
                 <ul class="future-list">
-                    <li>Multi-lingual support with mBART and XLM-RoBERTa</li>
-                    <li>Video and audio content summarization using Whisper + LLaMA</li>
-                    <li>Federated learning for privacy-preserving model updates</li>
-                    <li>Graph neural networks for relationship extraction</li>
-                    <li>Active learning for continuous model improvement</li>
-                    <li>Explainability module with attention visualization</li>
-                    <li>Mobile SDK for on-device summarization</li>
-                    <li>Integration with Slack, Discord for team notifications</li>
+                    <li>Literature review on abstractive summarization and LoRA fine-tuning</li>
+                    <li>Dataset exploration and preprocessing pipeline design</li>
+                    <li>Initial experiments with transformer-based summarization models</li>
+                    <li>Backend API structure and project scaffolding</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2>Planned Evaluation</h2>
+                <p>
+                    Once model training is completed, the system will be evaluated using:
+                </p>
+                <ul class="future-list">
+                    <li>ROUGE metrics for summarization quality</li>
+                    <li>BERTScore for semantic similarity</li>
+                    <li>Inference time and resource utilization</li>
+                    <li>Qualitative comparison between baseline and LLM-based outputs</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2>Future Roadmap</h2>
+                <ul class="future-list">
+                    <li>Complete LoRA fine-tuning on summarization datasets</li>
+                    <li>Integrate sentiment analysis into the summarization pipeline</li>
+                    <li>Add multi-source summarization support</li>
+                    <li>Deploy a working demo with API access</li>
+                    <li>Extend support to multilingual content</li>
                 </ul>
             </div>
 
             <div class="project-cta">
                 <a href="https://github.com/sriyasantoshi" class="cta-button" target="_blank">
-                    View on GitHub →
+                    GitHub (Work in Progress) →
                 </a>
                 <a href="index.html#contact" class="cta-button-secondary">
-                    Discuss This Project
+                    Collaborate / Discuss
                 </a>
             </div>
+
         </div>
     </section>
 
