@@ -1,11 +1,11 @@
 :root {
-    --primary: #00ff88;
-    --secondary: #00d4ff;
-    --dark: #0a0e27;
-    --darker: #050714;
-    --light: #ffffff;
+    --primary: #C78E6C;
+    --secondary: #E6CFC3;
+    --dark: #1B1A2E;
+    --darker: #13121F;
+    --light: #F4F1EE;
     --gray: #8892b0;
-    --purple: #c792ea;
+    --purple: #9B8BB4;
 }
 
 * {
@@ -92,16 +92,16 @@ body {
     left: 0;
     width: 100%;
     padding: 1.5rem 0;
-    background: rgba(5, 7, 20, 0.8);
+    background: rgba(19, 18, 31, 0.8);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    border-bottom: 1px solid rgba(199, 142, 108, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
     padding: 1rem 0;
-    background: rgba(5, 7, 20, 0.95);
+    background: rgba(19, 18, 31, 0.95);
 }
 
 .nav-container {
@@ -188,7 +188,7 @@ body {
 .project-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(199, 142, 108, 0.1);
     border: 1px solid var(--primary);
     border-radius: 50px;
     color: var(--primary);
@@ -223,8 +223,8 @@ body {
 
 .tech-tag {
     padding: 0.5rem 1rem;
-    background: rgba(0, 212, 255, 0.1);
-    border: 1px solid rgba(0, 212, 255, 0.3);
+    background: rgba(230, 207, 195, 0.1);
+    border: 1px solid rgba(230, 207, 195, 0.3);
     border-radius: 5px;
     color: var(--secondary);
     font-size: 0.85rem;
@@ -232,9 +232,9 @@ body {
 }
 
 .tech-tag:hover {
-    background: rgba(0, 212, 255, 0.2);
+    background: rgba(230, 207, 195, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(230, 207, 195, 0.3);
 }
 
 /* Project Content */
@@ -296,7 +296,7 @@ body {
 .feature-card {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(199, 142, 108, 0.1);
     border-radius: 15px;
     transition: all 0.3s;
     position: relative;
@@ -323,7 +323,7 @@ body {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--primary);
-    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 10px 40px rgba(199, 142, 108, 0.2);
 }
 
 .feature-icon {
@@ -393,15 +393,15 @@ body {
 .result-card {
     text-align: center;
     padding: 2rem;
-    background: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    background: rgba(199, 142, 108, 0.05);
+    border: 1px solid rgba(199, 142, 108, 0.2);
     border-radius: 15px;
     transition: all 0.3s;
 }
 
 .result-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 10px 30px rgba(199, 142, 108, 0.3);
 }
 
 .result-number {
@@ -429,8 +429,8 @@ body {
 .challenge-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: rgba(199, 146, 234, 0.05);
-    border: 1px solid rgba(199, 146, 234, 0.2);
+    background: rgba(155, 139, 180, 0.05);
+    border: 1px solid rgba(155, 139, 180, 0.2);
     border-radius: 10px;
 }
 
@@ -498,8 +498,8 @@ body {
 
 .disease-item {
     padding: 1rem;
-    background: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    background: rgba(199, 142, 108, 0.05);
+    border: 1px solid rgba(199, 142, 108, 0.2);
     border-radius: 8px;
     color: var(--primary);
     text-align: center;
@@ -507,7 +507,7 @@ body {
 }
 
 .disease-item:hover {
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(199, 142, 108, 0.1);
     transform: translateY(-3px);
 }
 
@@ -524,7 +524,7 @@ body {
 }
 
 .metrics-table thead {
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(199, 142, 108, 0.1);
 }
 
 .metrics-table th {
@@ -532,7 +532,7 @@ body {
     color: var(--primary);
     font-weight: 600;
     text-align: left;
-    border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+    border-bottom: 2px solid rgba(199, 142, 108, 0.3);
 }
 
 .metrics-table td {
@@ -553,7 +553,7 @@ body {
 .api-endpoint {
     padding: 1rem 1.5rem;
     margin-bottom: 1rem;
-    background: rgba(0, 212, 255, 0.05);
+    background: rgba(230, 207, 195, 0.05);
     border-left: 3px solid var(--secondary);
     border-radius: 5px;
     color: var(--gray);
@@ -592,7 +592,7 @@ body {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 10px 30px rgba(199, 142, 108, 0.4);
 }
 
 .cta-button-secondary {
@@ -602,7 +602,7 @@ body {
 }
 
 .cta-button-secondary:hover {
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(199, 142, 108, 0.1);
     transform: translateY(-3px);
 }
 
@@ -610,7 +610,7 @@ body {
 .footer {
     padding: 3rem 0;
     text-align: center;
-    border-top: 1px solid rgba(0, 255, 136, 0.1);
+    border-top: 1px solid rgba(199, 142, 108, 0.1);
     margin-top: 4rem;
 }
 
