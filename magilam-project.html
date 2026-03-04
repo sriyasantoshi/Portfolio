@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Deployment & Inference Optimization System - Sriya Santoshi</title>
+    <title>Magilam Foods – Admin Web Platform - Sriya Santoshi</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -66,7 +66,6 @@
             66% { transform: translate(-40px,80px) scale(0.9); }
         }
 
-        /* Navbar */
         .navbar {
             position: fixed; top: 0; width: 100%;
             z-index: 1000;
@@ -98,7 +97,6 @@
         .nav-menu a:hover { color: var(--accent); }
         .nav-menu a:hover::after { width: 100%; }
 
-        /* Hero */
         .project-hero { padding: 10rem 10% 5rem; position: relative; z-index: 1; }
         .container { max-width: 900px; margin: 0 auto; }
 
@@ -145,7 +143,6 @@
         }
         .tech-tag:hover { background: rgba(199,142,108,0.25); transform: translateY(-2px); }
 
-        /* Content */
         .project-content { padding: 4rem 10% 8rem; position: relative; z-index: 1; }
 
         .content-block {
@@ -195,22 +192,16 @@
         .tech-detail ul { padding-left: 1.4rem; }
         .tech-detail ul li { color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.65; font-size: 0.97rem; }
 
-        /* Problems */
-        .problem-block { border-left: 3px solid rgba(231,76,60,0.65); margin-top: 1.5rem; }
-        .problem-block h3 { color: #e97b6b !important; }
-        .problem-block > p { color: var(--text-secondary); line-height: 1.8; font-size: 0.97rem; margin-top: 0.5rem; }
-
-        .solution-block {
-            margin-top: 1.4rem; padding: 1.2rem 1.4rem;
-            border-radius: 10px;
-            background: rgba(39,174,96,0.07);
-            border-left: 3px solid rgba(39,174,96,0.55);
+        .role-highlight {
+            background: rgba(199,142,108,0.08);
+            border: 1px solid rgba(199,142,108,0.3);
+            border-radius: 14px;
+            padding: 1.8rem; margin-top: 1.2rem;
         }
-        .solution-block h4 { color: #5dba7d; font-size: 0.94rem; font-weight: 700; margin-bottom: 0.75rem; }
-        .solution-block ul { padding-left: 1.3rem; margin: 0; }
-        .solution-block ul li { color: var(--text-secondary); margin-bottom: 0.45rem; font-size: 0.93rem; line-height: 1.65; }
+        .role-highlight h3 { font-size: 1.02rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; }
+        .role-highlight ul { padding-left: 1.4rem; }
+        .role-highlight ul li { color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.65; font-size: 0.97rem; }
 
-        /* Footer */
         .footer {
             text-align: center; padding: 2.5rem 5%;
             color: var(--text-secondary);
@@ -250,23 +241,23 @@
         <div class="container">
             <a href="index.html#projects" class="back-link">← Back to Projects</a>
             <div class="project-badge">ONGOING PROJECT</div>
-            <h1 class="project-title">LLM Inference Optimization System</h1>
+            <h1 class="project-title">Magilam Foods — Admin Web Platform</h1>
             <p class="project-subtitle">
-                A real-time content summarization system that ingests live data from NewsAPI and Twitter,
-                then generates intelligent summaries using locally deployed LLaMA 2 (7B) via Ollama —
-                with an emphasis on solving practical LLM deployment challenges including context window management,
-                inference efficiency, batching, and caching.
+                An end-to-end business management platform built for Magilam Foods, covering menu management,
+                recipe costing, stock control, order processing, and billing. The system serves two user roles —
+                customers via a mobile app and administrators via a Next.js web dashboard. I contribute across
+                both frontend development and QA for the admin website, building features and owning the
+                full quality assurance pipeline.
             </p>
             <div class="tech-tags">
-                <span class="tech-tag">NLP</span>
-                <span class="tech-tag">LLMs</span>
-                <span class="tech-tag">LLaMA 2 (7B)</span>
-                <span class="tech-tag">LoRA</span>
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">NewsAPI</span>
-                <span class="tech-tag">Twitter API</span>
-                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">JWT Auth</span>
+                <span class="tech-tag">Axios</span>
+                <span class="tech-tag">QA & Testing</span>
+                <span class="tech-tag">GitHub Issues</span>
             </div>
         </div>
     </section>
@@ -277,127 +268,106 @@
             <div class="content-block">
                 <h2>Project Status</h2>
                 <p>
-                    <strong>This project is currently under active development.</strong><br><br>
-                    The system is being designed, prototyped, and iteratively improved — with a strong emphasis on
-                    identifying real engineering bottlenecks and resolving them with principled solutions.
-                    The focus of this project is on LLM deployment engineering and system-level optimization,
-                    emphasizing practical performance improvements for real-world usage.
+                    <strong>This project is currently under active development</strong> for a real client organization. An 11-member team is working across backend, mobile frontend, admin frontend, and DevOps tracks simultaneously. The admin website is being built in Next.js with TypeScript, consuming a centralized backend API that handles all business logic including costing, stock deduction, and billing.
                 </p>
             </div>
 
             <div class="content-block">
-                <h2>Project Objective</h2>
-                <p>The goal of this project is to build a production-ready text summarization platform that can:</p>
+                <h2>My Role</h2>
+                <p>I contribute to the Admin Website across both <strong>frontend implementation and QA</strong> — building features alongside the primary frontend developer and independently owning the quality assurance pipeline for the admin interface.</p>
+                <div class="role-highlight">
+                    <h3>Frontend Implementation — Key Contributions</h3>
+                    <ul>
+                        <li>Building admin interface pages and components in Next.js with TypeScript alongside Venkata Krishnan</li>
+                        <li>Implementing UI using Tailwind CSS, ensuring responsive layout and consistent design across all admin views</li>
+                        <li>Integrating frontend with backend REST APIs via Axios for data fetching, form submission, and state management</li>
+                        <li>Handling loading states, error states, and empty states across all async operations</li>
+                        <li>Contributing to the overall admin dashboard, management pages, and billing views as the team assigns scope</li>
+                    </ul>
+                </div>
+                <div class="role-highlight">
+                    <h3>Admin Website QA & Support — Key Responsibilities</h3>
+                    <ul>
+                        <li>Testing all admin authentication flows — login, logout, protected route enforcement, and role-based access control</li>
+                        <li>Validating all CRUD forms across menus, recipes, stock, orders, and billing for correct input handling, error messaging, and edge case behavior</li>
+                        <li>Verifying API response handling — correct loading states, error states, and data rendering across all admin pages</li>
+                        <li>Performing regression testing after each fix cycle to ensure no previously working functionality breaks</li>
+                        <li>Reporting bugs through GitHub Issues with full reproduction steps, expected versus actual behavior, and attached screenshots or recordings</li>
+                        <li>Re-testing resolved issues and confirming fixes before they are marked closed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>System Overview</h2>
+                <p>The platform is structured around a strict separation of concerns — the frontend holds no business logic, all computation (costing, stock deduction, billing) happens server-side, and the frontend consumes clean REST APIs.</p>
+                <div class="tech-detail">
+                    <h3>Backend Modules</h3>
+                    <ul>
+                        <li><strong>Authentication Service</strong> — JWT-based login with role-based access (Admin / Customer)</li>
+                        <li><strong>Menu & Recipe Engine</strong> — Menu items mapped to recipes, recipes mapped to ingredients</li>
+                        <li><strong>Costing Engine</strong> — Ingredient quantity multiplied by current price, plus labor cost, overheads, and profit margin to generate accurate quotations</li>
+                        <li><strong>Order Management</strong> — Order creation, status tracking, and confirmation workflows</li>
+                        <li><strong>Stock Management</strong> — Automatic stock deduction on order confirmation, with low-stock alerts</li>
+                        <li><strong>Billing System</strong> — Quotation generation, invoice creation, and payment status tracking</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Admin Website — Frontend Modules</h3>
+                    <ul>
+                        <li><strong>Dashboard</strong> — Summary metrics (orders, revenue, low stock), recent orders table, real-time API data</li>
+                        <li><strong>Menu & Recipe Management</strong> — Full CRUD for menu items, recipe mapping, and ingredient associations</li>
+                        <li><strong>Stock Management</strong> — Ingredient quantity updates, low-stock highlighting</li>
+                        <li><strong>Orders & Billing Views</strong> — Order lifecycle visualization, quotation and invoice display, read-only pricing</li>
+                        <li><strong>Auth & Navigation</strong> — JWT storage, protected routes, token expiration handling, persistent sidebar layout</li>
+                    </ul>
+                </div>
+                <div class="tech-detail">
+                    <h3>Tech Stack</h3>
+                    <ul>
+                        <li>Next.js with TypeScript for the admin web interface</li>
+                        <li>Tailwind CSS for consistent, responsive styling</li>
+                        <li>Axios with a configured base client for all API communication</li>
+                        <li>JWT for session management and route protection</li>
+                        <li>GitHub Issues for structured bug tracking and lifecycle management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>QA Scope & Testing Areas</h2>
                 <ul class="future-list">
-                    <li>Collect real-time textual data from <strong>NewsAPI</strong> (news articles) and <strong>Twitter API</strong> (social posts)</li>
-                    <li>Generate concise, coherent summaries using <strong>LLaMA 2 (7B parameters)</strong> served locally via Ollama</li>
-                    <li>Optimize inference performance through token-aware truncation, intelligent batching, and response caching strategies</li>
-                    <li>Provide sentiment insights alongside generated summaries</li>
+                    <li>Admin login, logout, session persistence, and token expiration handling</li>
+                    <li>Protected route enforcement and role-based access control verification</li>
+                    <li>All CRUD form flows — empty inputs, invalid data, boundary values, and error message accuracy</li>
+                    <li>API integration correctness — verifying response data renders accurately across dashboard, orders, stock, and billing views</li>
+                    <li>Loading and error state handling across all async operations</li>
+                    <li>Regression testing after each round of bug fixes</li>
+                    <li>UI consistency — spacing, typography, and responsive behavior across screen sizes</li>
                 </ul>
-            </div>
-
-            <div class="content-block">
-                <h2>System Architecture</h2>
-                <div class="tech-detail">
-                    <h3>Data Pipeline</h3>
-                    <ul>
-                        <li>Real-time content ingestion from <strong>NewsAPI</strong> (news articles) and <strong>Twitter API</strong> (social posts)</li>
-                        <li>Text preprocessing: cleaning, normalization, and tokenization</li>
-                        <li>Deduplication and basic entity extraction</li>
-                    </ul>
-                </div>
-                <div class="tech-detail">
-                    <h3>Modeling Approach</h3>
-                    <ul>
-                        <li><strong>LLaMA 2 (7B)</strong> as the core foundation model for abstractive summarization, served locally via Ollama</li>
-                        <li>Optional LoRA adapters for parameter-efficient domain adaptation (planned future extension)</li>
-                        <li>Separate sentiment analysis module using transformer-based classifiers</li>
-                    </ul>
-                </div>
-                <div class="tech-detail">
-                    <h3>Backend & API</h3>
-                    <ul>
-                        <li>FastAPI-based backend for model inference and request handling</li>
-                        <li>REST endpoints for summarization and sentiment analysis</li>
-                        <li>Dockerized deployment for reproducibility</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>Engineering Challenges & Solutions</h2>
-                <p>During development, two significant bottlenecks were identified and addressed:</p>
-
-                <div class="tech-detail problem-block">
-                    <h3>Problem 1 — Memory & Context Window Limitations</h3>
-                    <p>
-                        The system operates with a fixed <strong>2048-token context window</strong>, which restricts the amount
-                        of input text that can be processed at once. Instead of using a token-aware truncation strategy,
-                        the initial implementation simply took the first <strong>1500 characters</strong> — causing important
-                        content to be discarded. Large posts were often cut mid-sentence, harming coherence and
-                        semantic continuity. There was no intelligent chunking mechanism to handle long-form inputs properly.
-                    </p>
-                    <div class="solution-block">
-                        <h4>Solution</h4>
-                        <ul>
-                            <li>Replaced character-based truncation with a <strong>token-aware truncation strategy</strong> using the model's actual tokenizer, respecting the 2048-token limit without cutting mid-sentence</li>
-                            <li>Implemented a <strong>sliding window chunking mechanism</strong> that splits long documents into overlapping segments, summarizes each, then merges outputs — preserving semantic continuity</li>
-                            <li>Added sentence-boundary detection so truncation always ends at a clean sentence, improving input coherence for LLaMA 2</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tech-detail problem-block">
-                    <h3>Problem 2 — No Batching or Caching of Summaries</h3>
-                    <p>
-                        Each summary request was sent directly to Ollama without checking for previously processed results.
-                        Identical queries triggered a full re-summarization from scratch, leading to
-                        <strong>redundant computation and high latency</strong>. Multiple summaries were also processed
-                        sequentially rather than in batches, compounding the inefficiency.
-                    </p>
-                    <div class="solution-block">
-                        <h4>Solution</h4>
-                        <ul>
-                            <li>Introduced an <strong>in-memory cache</strong> (with optional Redis backend) keyed by a hash of the input text — repeated queries are served instantly without re-invoking the model</li>
-                            <li>Implemented <strong>batch processing</strong> so multiple summarization requests are grouped and sent to Ollama together, reducing total inference time significantly</li>
-                            <li>Added <strong>TTL-based cache expiry</strong> to ensure stale summaries are refreshed for time-sensitive content from live APIs</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             <div class="content-block">
                 <h2>Current Progress</h2>
                 <ul class="future-list">
-                    <li>Literature review on abstractive summarization and LoRA fine-tuning completed</li>
-                    <li>Data ingestion pipeline from <strong>NewsAPI</strong> and <strong>Twitter API</strong> operational</li>
-                    <li>LLaMA 2 (7B) integrated via Ollama for local inference</li>
-                    <li>Context window and batching/caching issues identified and resolved</li>
-                    <li>FastAPI backend scaffolded with summarization and sentiment endpoints</li>
-                </ul>
-            </div>
-
-            <div class="content-block">
-                <h2>Planned Validation & Performance Assessment</h2>
-                <p>Once system stabilization is completed, the platform will be validated using:</p>
-                <ul class="future-list">
-                    <li>ROUGE metrics for internal summarization quality verification</li>
-                    <li>BERTScore for semantic coherence assessment</li>
-                    <li>Latency measurements before and after caching implementation</li>
-                    <li>Throughput comparison with and without batch processing</li>
-                    <li>Memory usage and resource profiling during inference</li>
-                    <li>Qualitative analysis of summaries generated from live NewsAPI and Twitter content</li>
+                    <li>Project architecture, folder structure, API contracts, and ER diagram finalized</li>
+                    <li>Next.js project initialized with TypeScript, Tailwind CSS, Axios base client, and environment configuration</li>
+                    <li>Admin authentication UI and JWT session handling implemented</li>
+                    <li>Global layout with sidebar navigation and header scaffolded</li>
+                    <li>Menu, recipe, and stock management pages under active development</li>
+                    <li>QA testing initiated for completed auth and navigation flows</li>
                 </ul>
             </div>
 
             <div class="content-block">
                 <h2>Future Roadmap</h2>
                 <ul class="future-list">
-                    <li>Complete LoRA fine-tuning on domain-specific summarization datasets</li>
-                    <li>Integrate sentiment analysis into the summarization pipeline</li>
-                    <li>Add multi-source topic clustering before summarization</li>
-                    <li>Deploy a working demo with public API access</li>
-                    <li>Extend support to multilingual content</li>
+                    <li>Complete orders and billing view implementation and QA</li>
+                    <li>Full integration testing across mobile app, admin website, and backend</li>
+                    <li>End-to-end flow testing — order creation through stock deduction through invoice generation</li>
+                    <li>Performance and concurrency testing for simultaneous order handling</li>
+                    <li>Cloud deployment of backend and admin website with CI/CD pipeline</li>
+                    <li>Mobile app APK build and distribution for customer-side testing</li>
                 </ul>
             </div>
 

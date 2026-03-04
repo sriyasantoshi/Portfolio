@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Deployment & Inference Optimization System - Sriya Santoshi</title>
+    <title>Capsule – Smart Medicine Reminder & Health Companion - Sriya Santoshi</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -66,7 +66,6 @@
             66% { transform: translate(-40px,80px) scale(0.9); }
         }
 
-        /* Navbar */
         .navbar {
             position: fixed; top: 0; width: 100%;
             z-index: 1000;
@@ -98,7 +97,6 @@
         .nav-menu a:hover { color: var(--accent); }
         .nav-menu a:hover::after { width: 100%; }
 
-        /* Hero */
         .project-hero { padding: 10rem 10% 5rem; position: relative; z-index: 1; }
         .container { max-width: 900px; margin: 0 auto; }
 
@@ -145,7 +143,6 @@
         }
         .tech-tag:hover { background: rgba(199,142,108,0.25); transform: translateY(-2px); }
 
-        /* Content */
         .project-content { padding: 4rem 10% 8rem; position: relative; z-index: 1; }
 
         .content-block {
@@ -195,22 +192,16 @@
         .tech-detail ul { padding-left: 1.4rem; }
         .tech-detail ul li { color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.65; font-size: 0.97rem; }
 
-        /* Problems */
-        .problem-block { border-left: 3px solid rgba(231,76,60,0.65); margin-top: 1.5rem; }
-        .problem-block h3 { color: #e97b6b !important; }
-        .problem-block > p { color: var(--text-secondary); line-height: 1.8; font-size: 0.97rem; margin-top: 0.5rem; }
-
-        .solution-block {
-            margin-top: 1.4rem; padding: 1.2rem 1.4rem;
-            border-radius: 10px;
-            background: rgba(39,174,96,0.07);
-            border-left: 3px solid rgba(39,174,96,0.55);
+        .role-highlight {
+            background: rgba(199,142,108,0.08);
+            border: 1px solid rgba(199,142,108,0.3);
+            border-radius: 14px;
+            padding: 1.8rem; margin-top: 1.2rem;
         }
-        .solution-block h4 { color: #5dba7d; font-size: 0.94rem; font-weight: 700; margin-bottom: 0.75rem; }
-        .solution-block ul { padding-left: 1.3rem; margin: 0; }
-        .solution-block ul li { color: var(--text-secondary); margin-bottom: 0.45rem; font-size: 0.93rem; line-height: 1.65; }
+        .role-highlight h3 { font-size: 1.02rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; }
+        .role-highlight ul { padding-left: 1.4rem; }
+        .role-highlight ul li { color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.65; font-size: 0.97rem; }
 
-        /* Footer */
         .footer {
             text-align: center; padding: 2.5rem 5%;
             color: var(--text-secondary);
@@ -250,23 +241,23 @@
         <div class="container">
             <a href="index.html#projects" class="back-link">← Back to Projects</a>
             <div class="project-badge">ONGOING PROJECT</div>
-            <h1 class="project-title">LLM Inference Optimization System</h1>
+            <h1 class="project-title">Capsule — Smart Medicine Reminder & Health Companion</h1>
             <p class="project-subtitle">
-                A real-time content summarization system that ingests live data from NewsAPI and Twitter,
-                then generates intelligent summaries using locally deployed LLaMA 2 (7B) via Ollama —
-                with an emphasis on solving practical LLM deployment challenges including context window management,
-                inference efficiency, batching, and caching.
+                A full-stack health management platform designed to help elderly and chronically ill patients
+                manage their medication schedules reliably. The system delivers smart reminders, real-time
+                dose tracking, missed-dose alerts, and AI-assisted health guidance — with dedicated dashboards
+                for patients, caretakers, and doctors.
             </p>
             <div class="tech-tags">
-                <span class="tech-tag">NLP</span>
-                <span class="tech-tag">LLMs</span>
-                <span class="tech-tag">LLaMA 2 (7B)</span>
-                <span class="tech-tag">LoRA</span>
-                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Full Stack</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
                 <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">NewsAPI</span>
-                <span class="tech-tag">Twitter API</span>
-                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">OCR</span>
+                <span class="tech-tag">LLM Chatbot</span>
+                <span class="tech-tag">JWT Auth</span>
+                <span class="tech-tag">Cloud Storage</span>
             </div>
         </div>
     </section>
@@ -277,127 +268,99 @@
             <div class="content-block">
                 <h2>Project Status</h2>
                 <p>
-                    <strong>This project is currently under active development.</strong><br><br>
-                    The system is being designed, prototyped, and iteratively improved — with a strong emphasis on
-                    identifying real engineering bottlenecks and resolving them with principled solutions.
-                    The focus of this project is on LLM deployment engineering and system-level optimization,
-                    emphasizing practical performance improvements for real-world usage.
+                    <strong>This project is currently under active development</strong> We are building and integrating modules in parallel across patient, caretaker, and doctor roles, with an emphasis on modular architecture and clean API contracts between frontend and backend.
                 </p>
             </div>
 
             <div class="content-block">
-                <h2>Project Objective</h2>
-                <p>The goal of this project is to build a production-ready text summarization platform that can:</p>
-                <ul class="future-list">
-                    <li>Collect real-time textual data from <strong>NewsAPI</strong> (news articles) and <strong>Twitter API</strong> (social posts)</li>
-                    <li>Generate concise, coherent summaries using <strong>LLaMA 2 (7B parameters)</strong> served locally via Ollama</li>
-                    <li>Optimize inference performance through token-aware truncation, intelligent batching, and response caching strategies</li>
-                    <li>Provide sentiment insights alongside generated summaries</li>
-                </ul>
+                <h2>My Role</h2>
+                <p>I am responsible for the <strong>Caretaker Dashboard</strong> — a dedicated patient oversight interface built for family members, nurses, and professional caretakers managing another person's medication regimen.</p>
+                <div class="role-highlight">
+                    <h3>Caretaker Dashboard — Key Responsibilities</h3>
+                    <ul>
+                        <li>Designed and built the full caretaker-facing dashboard UI, including medication scheduling, alert management, appointment booking, and report generation</li>
+                        <li>Implemented color-coded medication status cards (green for taken, blue for upcoming, amber for pending) for at-a-glance daily compliance tracking</li>
+                        <li>Built a configurable report export system (PDF/CSV) filtered by date range and report type, with server-side generation</li>
+                        <li>Integrated an OCR prescription scanner that extracts medication name, dosage, and frequency from uploaded images for review before saving</li>
+                        <li>Developed a weekly adherence bar chart with dynamic color transitions (red to green) based on patient compliance percentage</li>
+                        <li>Built and wired all CRUD forms — medication schedule, alerts, doctor appointments, support tickets — with full backend API integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Problem Statement</h2>
+                <p>
+                    Many patients — particularly the elderly and those managing chronic illnesses — struggle to maintain consistent medication schedules. Missed or incorrect doses can lead to serious health complications. Traditional reminder systems are insufficient, and caregivers lack structured tools to monitor adherence. Healthcare providers also need structured reports and real-time adherence insights that conventional tools do not provide.
+                </p>
             </div>
 
             <div class="content-block">
                 <h2>System Architecture</h2>
                 <div class="tech-detail">
-                    <h3>Data Pipeline</h3>
+                    <h3>User Roles & Modules</h3>
                     <ul>
-                        <li>Real-time content ingestion from <strong>NewsAPI</strong> (news articles) and <strong>Twitter API</strong> (social posts)</li>
-                        <li>Text preprocessing: cleaning, normalization, and tokenization</li>
-                        <li>Deduplication and basic entity extraction</li>
+                        <li><strong>Patient Module</strong> — Medicine scheduling, intake tracking, appointment booking, adherence reports, and reminder configuration</li>
+                        <li><strong>Caretaker Dashboard</strong> — Patient oversight, medication management, alert system, prescription OCR, and report generation</li>
+                        <li><strong>Doctor Dashboard</strong> — Patient feedback management, status tracking, follow-up scheduling, and adherence analytics</li>
+                        <li><strong>Auth Module</strong> — JWT-based login with role-based access control (Patient / Doctor / Caretaker)</li>
                     </ul>
                 </div>
                 <div class="tech-detail">
-                    <h3>Modeling Approach</h3>
+                    <h3>AI & Intelligence Layer</h3>
                     <ul>
-                        <li><strong>LLaMA 2 (7B)</strong> as the core foundation model for abstractive summarization, served locally via Ollama</li>
-                        <li>Optional LoRA adapters for parameter-efficient domain adaptation (planned future extension)</li>
-                        <li>Separate sentiment analysis module using transformer-based classifiers</li>
+                        <li>OCR (CNN-based) for automated prescription text extraction</li>
+                        <li>LLM-powered health chatbot for answering general medication queries</li>
+                        <li>Classification model (Random Forest / Logistic Regression) for missed-dose prediction</li>
+                        <li>Pattern analysis for adaptive reminder optimization</li>
+                        <li>Speech synthesis for voice-based medication alerts</li>
                     </ul>
                 </div>
                 <div class="tech-detail">
-                    <h3>Backend & API</h3>
+                    <h3>Backend & Data</h3>
                     <ul>
-                        <li>FastAPI-based backend for model inference and request handling</li>
-                        <li>REST endpoints for summarization and sentiment analysis</li>
-                        <li>Dockerized deployment for reproducibility</li>
+                        <li>RESTful API backend handling all business logic — medicine schedules, dose events, alerts, notifications, and reports</li>
+                        <li>MongoDB collections: medications, intake histories, appointments, reminder settings, missed dose alerts, notification logs, users</li>
+                        <li>Cloud storage module for prescriptions, reports, and intake logs</li>
+                        <li>Dockerized deployment for environment reproducibility</li>
                     </ul>
                 </div>
             </div>
 
             <div class="content-block">
-                <h2>Engineering Challenges & Solutions</h2>
-                <p>During development, two significant bottlenecks were identified and addressed:</p>
-
-                <div class="tech-detail problem-block">
-                    <h3>Problem 1 — Memory & Context Window Limitations</h3>
-                    <p>
-                        The system operates with a fixed <strong>2048-token context window</strong>, which restricts the amount
-                        of input text that can be processed at once. Instead of using a token-aware truncation strategy,
-                        the initial implementation simply took the first <strong>1500 characters</strong> — causing important
-                        content to be discarded. Large posts were often cut mid-sentence, harming coherence and
-                        semantic continuity. There was no intelligent chunking mechanism to handle long-form inputs properly.
-                    </p>
-                    <div class="solution-block">
-                        <h4>Solution</h4>
-                        <ul>
-                            <li>Replaced character-based truncation with a <strong>token-aware truncation strategy</strong> using the model's actual tokenizer, respecting the 2048-token limit without cutting mid-sentence</li>
-                            <li>Implemented a <strong>sliding window chunking mechanism</strong> that splits long documents into overlapping segments, summarizes each, then merges outputs — preserving semantic continuity</li>
-                            <li>Added sentence-boundary detection so truncation always ends at a clean sentence, improving input coherence for LLaMA 2</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tech-detail problem-block">
-                    <h3>Problem 2 — No Batching or Caching of Summaries</h3>
-                    <p>
-                        Each summary request was sent directly to Ollama without checking for previously processed results.
-                        Identical queries triggered a full re-summarization from scratch, leading to
-                        <strong>redundant computation and high latency</strong>. Multiple summaries were also processed
-                        sequentially rather than in batches, compounding the inefficiency.
-                    </p>
-                    <div class="solution-block">
-                        <h4>Solution</h4>
-                        <ul>
-                            <li>Introduced an <strong>in-memory cache</strong> (with optional Redis backend) keyed by a hash of the input text — repeated queries are served instantly without re-invoking the model</li>
-                            <li>Implemented <strong>batch processing</strong> so multiple summarization requests are grouped and sent to Ollama together, reducing total inference time significantly</li>
-                            <li>Added <strong>TTL-based cache expiry</strong> to ensure stale summaries are refreshed for time-sensitive content from live APIs</li>
-                        </ul>
-                    </div>
-                </div>
+                <h2>Core Features</h2>
+                <ul class="future-list">
+                    <li>Smart medicine reminders via SMS, voice call, and in-app notifications with configurable language and timing offset</li>
+                    <li>Missed-dose detection with automatic alert generation and resolution tracking</li>
+                    <li>Dosage and intake history logging with side-effect recording</li>
+                    <li>OCR-powered prescription scanning to auto-populate medication details</li>
+                    <li>Doctor-patient-caretaker dashboards for role-specific monitoring</li>
+                    <li>Daily, weekly, and monthly adherence reports with export to PDF and CSV</li>
+                    <li>AI chatbot for general health and medication queries</li>
+                    <li>Cloud storage for prescriptions, logs, and medical documents</li>
+                </ul>
             </div>
 
             <div class="content-block">
                 <h2>Current Progress</h2>
                 <ul class="future-list">
-                    <li>Literature review on abstractive summarization and LoRA fine-tuning completed</li>
-                    <li>Data ingestion pipeline from <strong>NewsAPI</strong> and <strong>Twitter API</strong> operational</li>
-                    <li>LLaMA 2 (7B) integrated via Ollama for local inference</li>
-                    <li>Context window and batching/caching issues identified and resolved</li>
-                    <li>FastAPI backend scaffolded with summarization and sentiment endpoints</li>
-                </ul>
-            </div>
-
-            <div class="content-block">
-                <h2>Planned Validation & Performance Assessment</h2>
-                <p>Once system stabilization is completed, the platform will be validated using:</p>
-                <ul class="future-list">
-                    <li>ROUGE metrics for internal summarization quality verification</li>
-                    <li>BERTScore for semantic coherence assessment</li>
-                    <li>Latency measurements before and after caching implementation</li>
-                    <li>Throughput comparison with and without batch processing</li>
-                    <li>Memory usage and resource profiling during inference</li>
-                    <li>Qualitative analysis of summaries generated from live NewsAPI and Twitter content</li>
+                    <li>System architecture, ER diagram, and API contracts finalized</li>
+                    <li>Patient module fully scaffolded — medicine scheduling, intake tracking, appointment booking, and reminder settings operational</li>
+                    <li>Caretaker dashboard built — medication management, alert system, OCR scanner, appointment booking, and report export implemented</li>
+                    <li>Doctor dashboard under active development — feedback forms, patient monitoring, and history logs in progress</li>
+                    <li>Auth module with JWT and role-based routing configured</li>
+                    <li>Backend API endpoints scaffolded for all core modules</li>
                 </ul>
             </div>
 
             <div class="content-block">
                 <h2>Future Roadmap</h2>
                 <ul class="future-list">
-                    <li>Complete LoRA fine-tuning on domain-specific summarization datasets</li>
-                    <li>Integrate sentiment analysis into the summarization pipeline</li>
-                    <li>Add multi-source topic clustering before summarization</li>
-                    <li>Deploy a working demo with public API access</li>
-                    <li>Extend support to multilingual content</li>
+                    <li>Complete AI chatbot integration and missed-dose prediction model training</li>
+                    <li>Implement voice alert generation via speech synthesis</li>
+                    <li>Connect SMS and voice call notification channels</li>
+                    <li>Full end-to-end testing across all three user roles</li>
+                    <li>Deploy to cloud with public demo access</li>
                 </ul>
             </div>
 
