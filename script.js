@@ -13,10 +13,10 @@ function animateCursor() {
     cursorX += (mouseX - cursorX) * 0.2;
     cursorY += (mouseY - cursorY) * 0.2;
     
-    cursor.style.left = cursorX + 'px';
-    cursor.style.top = cursorY + 'px';
-    cursorGlow.style.left = mouseX + 'px';
-    cursorGlow.style.top = mouseY + 'px';
+    cursor.style.left = (cursorX - 5) + 'px';
+    cursor.style.top = (cursorY - 5) + 'px';
+    cursorGlow.style.left = (mouseX - 20) + 'px';
+    cursorGlow.style.top = (mouseY - 20) + 'px';
     
     requestAnimationFrame(animateCursor);
 }
